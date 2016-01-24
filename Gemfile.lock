@@ -84,6 +84,8 @@ GEM
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    lightbox2-rails (2.7.1)
+      railties (>= 3.1)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -203,6 +205,7 @@ DEPENDENCIES
   font-awesome-sass (~> 4.5.0)
   jquery-rails
   kaminari
+  lightbox2-rails
   pg (~> 0.15)
   pry-rails
   puma

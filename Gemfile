@@ -17,6 +17,7 @@ gem 'font-awesome-sass', '~> 4.5.0'
 # JS
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
+gem 'lightbox2-rails'
 
 group :development, :test do
   gem 'binding_of_caller'

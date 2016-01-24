@@ -1,7 +1,10 @@
 @import 'application';
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
-@import 'lightbox.min';
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  width: 100%;
+}
 
 h1, h2, h3, h4, h5, h6 {
   color: #fff;
@@ -19,6 +22,25 @@ a {
   &.btn-primary, &.btn-primary:active:focus {
     background-color: #e5e5e5;
     border-color: #e5e5e5;
+    color: #181818;
+  }
+}
+
+.modal .modal-dialog .modal-content {
+  background-color: #d0d0d0;
+  color: #000;
+
+  .btn.btn-default {
+    background-color: #d0d0d0;
+    border-color: #b3b3b3;
+
+    &:hover {
+      background-color: #b3b3b3;
+      border-color: #b3b3b3;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
     color: #181818;
   }
 }
