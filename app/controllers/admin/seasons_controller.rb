@@ -36,7 +36,7 @@ module Admin
     private
 
     def season_params
-      return {} unless prams[:season]
+      return {} unless params[:season]
       params.require(:season).permit(
         :title, :start_date, :end_date, :type
       )

@@ -36,7 +36,7 @@ module Admin
     private
 
     def application_params
-      return {} unless prams[:application]
+      return {} unless params[:application]
       params.require(:application).permit(
         :title, :start_date, :end_date, :type
       )
