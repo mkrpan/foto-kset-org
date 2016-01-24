@@ -16,7 +16,7 @@ Bundler.require(*Rails.groups)
 module Foto
   class Application < Rails::Application
     config.time_zone = 'Zagreb'
-    config.assets.precompile += %w( public.css public.js lightbox/* )
+    config.assets.precompile += %w( public.css public.js admin.css admin.js lightbox/* )
     config.active_record.raise_in_transactional_callbacks = true
   end
 end
