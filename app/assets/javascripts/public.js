@@ -1,4 +1,6 @@
 //= require application
+//= require jquery.transmit.min
+//= require lightbox.min
 
 $(document).ready(function() {
     $("#TecajContainer").mouseenter(function() {
