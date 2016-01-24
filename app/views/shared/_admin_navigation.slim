@@ -1,0 +1,30 @@
+nav.navbar.navbar-default
+  .container-fluid
+    .navbar-header
+      button.navbar-toggle.collapsed data-toggle="collapse" data-target="#navigation"
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+
+      = link_to root_path, class: 'navbar-brand' do
+        | Foto
+
+    .collapse.navbar-collapse#navigation
+      ul.nav.navbar-nav.navbar-right
+        li.dropdown
+          = link_to '#', class: 'bropdown-toggle', data: { toggle: 'dropdown' } do
+            | Username
+            span.carret
+
+          ul.dropdown-menuv
+
+      ul.nav.navbar-nav.navbar-right
+        = active_link_to apps_path, active: :inclusive, wrap_tag: :li do
+          = icon('database')
+          | Applications
+
+        = active_link_to users_path, active: :inclusive, wrap_tag: :li do
+          = icon('users')
+          | Users
+

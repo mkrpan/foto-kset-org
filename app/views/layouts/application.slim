@@ -1,0 +1,8 @@
+html
+  head
+    title Fotosekcija KSET-a
+    = stylesheet_link_tag    'public', media: 'all'
+    = javascript_include_tag 'public'
+    = csrf_meta_tags
+  body
+    = yield

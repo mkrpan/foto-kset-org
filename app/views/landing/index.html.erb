@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+
+  <html>
+
+
+    <head>
+      <meta charset = "utf-8">
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      <link href='https://fonts.googleapis.com/css?family=Oxygen&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <link rel  = "shortcut icon" type="image/png" href="favicon.png"/>
+      <title> Fotosekcija KSET </title>
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar" data-offset="400">
+
+
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navbar">
+                <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+              </button>
+          </div>
+          <div class="collapse navbar-collapse" id="Navbar">
+            <ul class="nav navbar-nav">
+              <li><a class="Shortcut" href="#OFotosekciji">O Fotosekciji</a></li>
+              <li><a class="Shortcut" href="#OTecaju">O tečaju</a></li>
+              <li><a class="Shortcut" href="#ORadionici">O Radionici</a></li>
+              <li><a class="Shortcut" href="#MonografijaTekst">O monografiji</a></li>
+              <li><a class="Shortcut" href="#TamnaKomoraTekst">O tamnoj komori</a></li>
+              <li><a class="Shortcut" href="#Fotoaktivnosti">Fotoaktivnosti</a></li>
+                      <li><a class="Shortcut" href="#Kontakt">Kontakt</a></li>
+                      <li><a class="Shortcut" href="#PostaniClan">Postani photowan</a></li>
+            </ul>
+        </div>
+        </div>
+      </nav>
+
+
+      <div class = "container-fluid">
+        <div class = "row">
+          <div class = "col-xs-12">
+            <h1 id = "CoverTitle"> <strong>Fotosekcija KSET-a</strong></h1>
+          </div>
+        </div>
+      </div>
+
+      <div class = "container onepage">
+        <div class = "row">
+          <div class = "col-xs-12 col-md-6">
+            <div class = "ColumnContent" id="OFotosekciji">
+
+              <h2> O Fotosekciji </h2>
+
+              <p> Fotografska sekcija koja je danas jedna od devet sekcija <a href = "https://www.kset.org/" target = "_blank">Kluba studenata elektrotehnike i računarstva (KSET)</a>, nastala je najkasnije 1965. godine na tadašnjem ETF-u (danas FER). Prije nego što se 1976. godine pridružila KSET-u, njezin foto-laboratorij nalazio se u prizemlju A zgrade, a danas je smješten u sjeveroistočnome uglu KSET-a. Dok KSET još nije otvorio svoja vrata, Fotosekcija je surađivala s Našim Listom i održavala foto-tečaje. </p>
+
+              <p> Danas je Fotosekcija studentska amaterska zajednica ljubitelja fotografije koja broji oko trideset aktivnih članova i posjeduje profesionalnu fotografsku opremu, studijsku rasvjetu, tamnu komoru i računala za obradu fotografija. S ciljem promicanja znanja o fotografiji, u sklopu Fotosekcije se jednom do dvaput godišnje održava foto-tečaj i nešto češće jednodnevna foto-radionica, na koje su dobrodošli svi bez obzira na dob. Radom u tamnoj komori potiče se očuvanje tradicionalne analogne fotografije, dok se plodovi rada članova sekcije mogu vidjeti kroz samostalne i zajedničke izložbe.</p>
+
+              <p> S ciljem dokumentiranja povijesti KSET-a, fotografiraju se svi <a href = "https://www.kset.org/gallery/live/" target = "_blank">koncerti i ostali događaji </a>, a sve fotografije mogu se pronaći na službenim stranicama. </p>
+            </div>
+          </div>
+
+          <div class = "col-xs-12 col-md-6">
+            <table class = "GalleryLSS">
+              <thead>
+                <tr>
+                  <th colspan = "2"> <a href = "images/dino1.jpg" data-lightbox = "onama">
+                      <%= image_tag 'dino1.jpg', class: 'img-responsive img-fadein'%>
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td> <a href = "images/matej1.jpg" data-lightbox = "onama">
+                    <%= image_tag 'matej1.jpg', class: 'img-responsive img-fadein'%>
+                  </td>
+
+                  <td> <a href = "images/dino2.jpg" data-lightbox = "onama">
+                    <%= image_tag 'dino2.jpg', class: 'img-responsive img-fadein'%>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+        <div id="TecajContainer">
+          <div class = "container onepage">
+            <div class = "row">
+
+              <button type="button" class="btn btn-primary btn-lg hidden-xs hidden-sm" data-toggle="modal" data-target="#TecajModal" id ="TecajModalButton">Prijavi se <br>na tečaj </button>
+
+              <div class = "col-xs-12 col-md-6">
+
+                <table class = "GalleryLSS">
+                  <thead>
+                    <tr>
+                      <th colspan = "2"> <a href = "images/tecaj_screenshot.png" data-lightbox = "tecaj">
+                        <%= image_tag 'tecaj_screenshot.png', class: 'img-responsive img-fadein'%>
+                      </th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td> <a href = "images/tecaj_zajednicko1.jpg" data-lightbox = "tecaj">
+                        <%= image_tag 'tecaj_zajednicko1.jpg', class: 'img-responsive img-fadein'%>
+                      </td>
+
+                      <td> <a href = "images/tecaj_zajednicko2.jpg" data-lightbox = "tecaj">
+                        <%= image_tag 'tecaj_zajednicko2.jpg', class: 'img-responsive img-fadein'%>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class = "col-xs-12 col-md-6">
+                <div class = "ColumnContent" id="OTecaju">
+
+                  <h2> O Tečaju </h2>
+
+                  <p> Fotosekcija već 40 godina organizira tečajeve fotografije za početnike. U zadnjih je 10 godina organizirano otprilike 20 tečajeva fotografije koje je pohađalo sveukupno više od 600 polaznika.</p>
+
+                  <p> Tečaj fotografije se održava u oba semestra tijekom akademske godine i sastoji se od tri modula: osnovnog, digitalnog i analognog. U sklopu osnovnog modula tečaja održava se 8 predavanja u trajanju od 2 školska sata i dvije praktične radionice u trajanju od 3 sata. Digitalni modul i analogni modul sastoje se od 4 predavanja u trajanju od 2 školska sata. Svaki polaznik bira želi li pohađati analogni ili digitalni modul (ili oba). Praktični dio tečaja uključuje zajedničko fotografiranje po Zagrebu, rad u tamnoj komori za analogni modul (razvijanje negativa i pozitiva) i digitalna obrada fotografije za digitalni modul (tri dodatna predavanja i laboratorij digitalne obrade fotografija).Na kraju tečaja polaznici će izložiti svoje fotografije koje su kreirali tijekom tečaja u izložbenom prostoru KSET-a. </p>
+
+                  <p> <strong>Cijene tečaja su sljedeće:
+                    <ul>
+                      <li> Osnovni modul: 450 kn </li>
+                      <li> Osnovni + Digitalni modul: 650 kn</li>
+                      <li> Osnovni + Analogni modul: 650 kn </li>
+                      <li> Osnovni + Analogni + Digitalni modul: 750 kn </li>
+                    </ul>
+                    </strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+
+        <div id="RadionicaContainer">
+          <div class = "container onepage">
+            <div class = "row">
+              <button type="button" class="btn btn-primary btn-lg hidden-xs hidden-sm" data-toggle="modal" data-target="#RadionicaModal" id ="RadionicaModalButton">Prijavi se <br>na <br>jednodnevnu <br>fotoradionicu </button>
+              <div class = "col-xs-12 col-md-6">
+                <div class = "ColumnContent" id="ORadionici">
+
+                  <h2> O Radionici </h2>
+
+
+                  <p> Jednodnevna fotografska radionica traje 6 sati. Sastoji se od trosatnog teorijskog dijela i trosatnog praktičnog dijela te je namijenjena je početnicima i svima koji žele zakoračiti u svijet fotografije.</p>
+
+                  <p> Teorijski dio sastoji se od tri predavanja: "Kontrola postavki", "Vrste fotoaparata i objektiva" i "Kompozicija". Na teorijskom dijelu nau�it ćete što znače sve one silne oznake i pojmovi na koje ste možda naišli: "50mm f/2.8", "brzina zatvarača 1/2000", "dubinska oštrina" i sl. Naučit ćete ćemu služe svi oni silni gumbići na fotoaparatu i osnovna pravila kompozicije. Kupujete novi fotić i ne znate koji biste? Na kraju radionice znat ćete i odgovor na to pitanje. </p>
+
+                  <p> Na praktičnom dijelu sve naučeno u teoriji primijenit ćete u praksi na vašim ili našim fotoaparatima uz pratnju iskusnih članova fotosekcije. Proći ćemo kroz sve postavke i mogućnosti fotoaparata na licu mjesta. </p>
+
+                  <p> <strong>Cijena radionice je 200 kn</strong>, dok učenici i studenti uz predočenje indeksa/iksice dobivaju 50% popusta i za njih je cijena radionica 100 kn. </p>
+                </div>
+              </div>
+
+              <div class = "col-xs-12 col-md-6">
+                <table class = "GalleryLSS">
+                  <thead>
+                    <tr>
+                      <th colspan = "2"> <a href = "images/radionica_prakticni3.jpg" data-lightbox = "radionica">
+                        <%= image_tag 'radionica_prakticni3.jpg', class: 'img-responsive img-fadein'%>
+                      </th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td> <a href = "images/radionica_prakticni1.jpg" data-lightbox = "radionica">
+                        <%= image_tag 'radionica_prakticni1.jpg', class: 'img-responsive img-fadein'%>
+                      </td>
+
+                      <td> <a href = "images/radionica_prakticni2.jpg" data-lightbox = "radionica">
+                        <%= image_tag 'radionica_prakticni2.jpg', class: 'img-responsive img-fadein'%>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+    </div>
+
+      <div id = "MonografijaOuter">
+        <div class = "container onepage-padding">
+          <div class = "row">
+            <div class = "col-xs-12 col-md-6">
+              <div id = "MonografijaTekst">
+
+                <h2> Monografija </h2>
+
+                <p> Nije prvi put da se netko sjetio da bi bilo zgodno napraviti knjigu o KSET-u, ali je jedini puta do sada da se uspjelo dogurati do kraja... </p>
+                <p> Monografija KSET-a na petstotrideset i šest (536!) ful kolor stranica; jedan od velikih projekata foto sekcije, na kojemu je čitavo foto-članstvo radilo gotovo tri godine, kako bi slikom i riječi obuhvatilo prve 32 godine najdražeg nam Kluba...
+                Knjiga o ksetovcima i svim njihovim malim i velikim pothvatima, zbog kojih je KSET postao i ostao nezaboravno mjesto kakvim ga svi znamo... sve što vidite oko sebe čim pređete prag, njihovih je ruku djelo; od uređenja prostora, organizacije koncerta kojeg slušate, izložbi koje vise... A ima tu još puno, puno više toga sto se u KSET-u radi... Mi smo to samo sačuvali kako se ne bi zaboravilo, izgubilo: od ksetovaca za ksetovce. </p>
+                <p> Zavirite i pronađite sliku mame, tate, strica, tetke, sestre, brata, svoju... ili samo provjerite što se sve dešavalo u prostorima kotlovnice u prvih trideset i dvije godine njena postojanja. I uživajte. </p>
+              </div>
+            </div>
+
+            <div class = "col-xs-12 col-md-6">
+              <div id = "MonografijaSlika">
+                <%= image_tag 'kset_mono.png', class: 'img-responsive'%>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id = "TamnaKomoraOuter">
+        <div class = "container onepage-padding">
+          <div class = "row">
+            <div class = "col-xs-12">
+              <div id = "TamnaKomoraTekst">
+
+                <h2> Tamna komora </h2>
+
+                <p> Jedna od glavnih zadaća i tradicija Fotosekcije jest očuvanje analogne fotografije. U skromnom prostoru Fotosekcije nalazi se i tamna komora koju besplatno mogu koristiti svi naši članovi. </p>
+
+                <p> Od kemije za negativ proces, zbog sve oskudnije ponude fotokemije na našem tržištu, najviše koristimo Fomadon. No kroz povijest sekcije, svoje mjesto pod suncem imali su i FR-16, ID-11, D76, Microphen i Perceptol. Od fiksira tu su se najčešće koristili i još se koriste, Hypam i FF-2. Pozitive razvijamo u PQ Universalu i fiskiramo u Rapid Fix-u. </p>
+
+                <p> Od ostalog pribora, vrijedno je spomenuti i aparat za povećavanje, hladnjak za kemiju, pozamašnu količinu filmova (uglavnom Fomapana, ali i ponešto Ilforda i TriX-a za svečanije prigode) i papira (opet uglavnom Fominih, ali i police i police tko zna koliko starih neiskorištenih fotopapira). Imamo i nemali broj doza i spirala, štipaljki i kadica. Tu su i tri izvora crvenog svjetla (dva iz obične žarulje preko koje je crveni filter i jedan iz LED dioda). Svu potrošenu kemiju pretačemo u dvije 50 litarske bačve koje zatim odnosimo na zbrinjavanje. </p>
+
+                <p> U neposrednoj blizini komore nalazi se i Epsonov skener za filmove, foto-printer i dva računala za obradu fotografija. Osim toga, tu je i ormarić za sušenje filmova. </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12" id="Fotoaktivnosti">
+                            <h2> Fotoaktivnosti </h2>
+                            <p style="border-bottom: 1px solid #d0d0d0;"> Dušu fotosekcije čine njezini članovi. Fotosekcija je uspješna onoliko koliko se njenim članovima da ulagati svoje vrijeme u nju. Imali smo sre�u da je unazad pet godina Fotosekcija vrlo aktivna i da su njezini članovi postali vrlo bliski i da su se razvila doživotna prijateljstva, ali i ljubavi. :) </p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 ColumnContent">
+                            <p style="border-bottom: 1px solid #d0d0d0;"> Sastanci Fotosekcije vrlo često završe sekcijskom pivom u Piccolu ili u jednoj od mnogih pivovara u centru Zagreba na inicijativu sekcijskih ljubitelja craft piva, a nerijetko ostanemo i na KSET-ovim Caffeima plešući fotoples, nagovarajući mlađe članove da fotkaju ljude i da fotkaju spontane pozerske fotografije nas ostalih kako bi naša druženja zauvijek ostala sačuvana. Tako se jednom dogodila situacija da je Fotosekcija svojim druženjima spojila dva dežurstva - drugim riječima, svaki dan smo se negdje družili 7 dana za redom do novog dežurstva. </p>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 ColumnContent">
+                            <p style="border-bottom: 1px solid #d0d0d0;"> Nabavkom studijske rasvjete, započeli smo i s random fotosessionima isprobavajući svakakve lude ideje, a kod takvih druženja često padne i fotokuhinja gdje su palačinke omiljeni specijalitet svih nas. Iz fotosekcijske tvornice ideja, iznikli su i Grumpy Santa fotkanje gdje gosti KSET-a mogu napraviti Božićnu fotku sa službenim KSETovim Djedicom Koji je Mrtav Iznutra i Mrzi Ljude. Također svako malo organiziramo i besplatno fotkanje za dokumente - od indeksa, iksice, pokaza, osobne i putovnice do vize za Amerike. </p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 ColumnContent">
+                            <p style="border-bottom: 1px solid #d0d0d0;"> Da razbijemo monotoniju, fotosekcija u zadnje vrijeme često ide zajedno na izlete. Osim Rally-ija i planinarskih izleta koje organiziraju <a href="http://pijandure.kset.org/" target="_blank">P.I.J.A.N.D.U.R.E. </a>, Fotosekcija je bila i na četverodnevnom izletu u Sarajevu (dva puta!), četverodnevnom ljetovanju u Splitu, neki su potegli i do Cavtata, a posjetit će i Beograd, Gardaland i Budimpeštu. Također, surađivali smo s raznim udrugama, te smo posjetili i Ludbreg i Orahovicu. </p>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 ColumnContent">
+                            <p style="border-bottom: 1px solid #d0d0d0;"> Pod kontrolom fotosekcije je i izložbeni prostor u KSET-u koji se sastoji od tri velika pleksija u separeima, ali i tri manja pleksija na ogledalima u glavnoj dvorani KSET-a. Na tim prostorima izlažu se samostalne i zajedničke izložbe članova fotosekcije, izložbe polaznika tečaja, retrospektive koncerata, radova za Skupštinu i Brucošijadu FER-a. Fotografije s Brucošijade FER-a izlažemo u predvorju FER-a na panoima. </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#GalleryCarousel"> Galerija slika </button>
+                        </div>
+                    </div>
+                </div>
+
+
+      <div class = "container">
+        <div class = "row" >
+          <div class = "col-xs-12">
+            <div id = "GalleryCarousel" class = "carousel slide collapse" data-ride = "carousel">
+              <ol class="carousel-indicators">
+                  <li data-target="#GalleryCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#GalleryCarousel" data-slide-to="1"></li>
+                  <li data-target="#GalleryCarousel" data-slide-to="2"></li>
+                  <li data-target="#GalleryCarousel" data-slide-to="3"></li>
+                  <li data-target="#GalleryCarousel" data-slide-to="4"></li>
+                  <li data-target="#GalleryCarousel" data-slide-to="5"></li>
+                  <li data-target="#GalleryCarousel" data-slide-to="6"></li>
+                  <li data-target="#GalleryCarousel" data-slide-to="7"></li>
+                  <li data-target="#GalleryCarousel" data-slide-to="8"></li>
+                </ol>
+                <div class = "carousel-inner" role = "listbox">
+                  <div class = "item active">
+                    <%= image_tag 'druzenja/1.jpg'%>
+                    <div class = "carousel-caption">
+                      <h3> 50 godina Fotosekcije </h3>
+                      <p> Stari i mladi Fotosekcije na 50. rođendanu </p>
+                    </div>
+                  </div>
+
+                  <div class = "item">
+                    <%= image_tag 'druzenja/2.jpg'%>
+                    <div class = "carousel-caption">
+                      <h3> Zagrebački rally </h3>
+                      <p> Članovi fotosekcije na Zagrebačkom rally u organizaciji P.I.J.A.N.D.U.R.E.-a </p>
+                    </div>
+                  </div>
+
+                  <div class = "item">
+                    <%= image_tag 'druzenja/3.jpg'%>
+                    <div class = "carousel-caption">
+                      <h3> Silly Petra </h3>
+                      <p> Jedan od brojnih trenutaka uhvaćen u našim druženjima </p>
+                    </div>
+                  </div>
+
+                  <div class = "item">
+                    <%= image_tag 'druzenja/4.jpg'%>
+                    <div class = "carousel-caption">
+                      <h3> FotoCaffe </h3>
+                      <p> Zajednička fotka fotodruženja na KSET Caffe-u </p>
+                    </div>
+                  </div>
+
+                  <div class = "item">
+                    <%= image_tag 'druzenja/5.jpg'%>
+                    <div class = "carousel-caption">
+                      <h3> Zadnji sastanak </h3>
+                      <p> Zadnji sastanak 2015. godine prije promjene vodstva </p>
+                    </div>
+                  </div>
+
+                  <div class = "item">
+                    <%= image_tag 'druzenja/6.jpg'%>
+                    <div class = "carousel-caption">
+                      <h3> Grumpy Santa </h3>
+                      <p> Članovi fotosekcije s Djedicom Koji je Mrtav Iznutra i Mrzi Ljude prilikom Božićnog fotkanja i izrađivanja razglednica u KSET-u </p>
+                    </div>
+                  </div>
+
+                  <div class = "item">
+                    <%= image_tag 'druzenja/7.jpg'%>
+                    <div class = "carousel-caption">
+                      <h3> Selfie time! </h3>
+                      <p> Obavezni selfie na Zagrebačkom rally-ju </p>
+                    </div>
+                  </div>
+
+                  <div class = "item">
+                    <%= image_tag 'druzenja/8.jpg'%>
+                    <div class = "carousel-caption">
+                      <h3> Elektroplaninarski rally </h3>
+                      <p> Fototim na Elektroplaninarskom rallyju u organizaciji P.I.J.A.N.D.U.R.E.-a </p>
+                    </div>
+                  </div>
+
+                  <div class = "item">
+                    <%= image_tag 'druzenja/9.jpg'%>
+                    <div class = "carousel-caption">
+                      <h3> Clone stamp! </h3>
+                      <p> Kad nas nema dovoljno za druženje stvorit ćemo još ekipe  </p>
+                    </div>
+                  </div>
+                </div>
+
+                <a class="left carousel-control" href="#GalleryCarousel" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#GalleryCarousel" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="contact-info-wrapper">
+
+                  <div class="container onepage-padding">
+                      <div class="row">
+                          <div class="col-xs-12" id="Kontakt">
+
+                              <h2> Kontakt </h2>
+                              <p> Javite se na <strong><u>foto-info@kset.org</u></strong> za vi��e informacija o tečaju, radionici i monografiji ili ako vam je dosadno i želite pričati s nekim. Mi jako volimo odgovarati na mailove! :) </p>
+
+                          </div>
+                      </div>
+
+                  </div>
+
+              </div>
+
+            <div id="become-a-photowan">
+
+                <div class="container onepage-padding">
+                    <div class="row">
+                        <div class="col-xs-12" id="PostaniClan">
+                            <h2> Postani član! </h2>
+                            <p>
+                                Ovdje ide tekst kako smo super i zašto bi nam se netko pridružio. Javi se na foto-info@kset.org, potraži nas na fejsu,
+                                pošalji mail trenutnom voditelju sekcije (hint: mail je na KSETovoj stranici), pitaj na šanku KSET-a za Fotosekciju ili dođi na jedan od naših sastanaka petkom u 19h u KSET-u.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        <div id = "PrijaveOuter" class="hidden-md hidden-lg">
+          <div class = "container">
+            <div class = "row">
+              <div class = "col-xs-12" id = "PrijavaTecajContainer">
+                <h3 style = "text-align: center;"> Prijavi se na tečaj fotografije! </h3>
+                <div style = "text-align:center; margin-bottom: 5%;"><button type = "button" class = "btn btn-default btn-lg" data-toggle = "collapse" data-target = "#PrijavaTecaj"> Klikni ovdje! </button> </div>
+                <div id = "PrijavaTecaj" class = "collapse">
+                  <form>
+                    <div class = "form-group">
+                      <label for = "ime"> Ime </label>
+                      <input type = "text" class = "form-control" id = "ime" placeholder: "Ime">
+                    </div>
+                    <div class = "form-group">
+                      <label for = "prezime"> Prezime </label>
+                      <input type = "text" class = "form-control" id = "prezime" placeholder: "Prezime">
+                    </div>
+                    <div class = "form-group">
+                      <label for = "email"> E-mail </label>
+                      <input type = "email" class = "form-control" id = "email" placeholder: "e-mail">
+                    </div>
+                    <div class = "form-group">
+                      <label for = "brojtelefona"> Broj mobitela </label>
+                      <input type = "tel" class = "form-control" id = "brojtelefona" placeholder: "+3859.....">
+                    </div>
+                    <div> <label>Zainteresiran/a sam za</label> </div>
+                    <label class = "radio-inline">
+                        <input type = "radio" name = "inlineRadioOptions" id  ="inlineRadion1" value = "option1"> Osnovni
+                    </label>
+                    <label class = "radio-inline">
+                        <input type = "radio" name = "inlineRadioOptions" id  ="inlineRadion2" value = "option2"> Osnovni + Digitalni
+                    </label>
+                    <label class = "radio-inline">
+                        <input type = "radio" name = "inlineRadioOptions" id  ="inlineRadion3" value = "option3"> Osnovni + Analogni
+                    </label>
+                    <label class = "radio-inline">
+                        <input type = "radio" name = "inlineRadioOptions" id  ="inlineRadion4" value = "option4"> Osnovni + Analogni + Digitalni
+                    </label>
+                    <label class = "radio-inline">
+                        <input type = "radio" name = "inlineRadioOptions" id  ="inlineRadion5" value = "option5"> Ne znam još :(
+                    </label>
+                  </form>
+                  <div style = "text-align:center; margin-bottom: 5%;"><button type = "button" class = "btn btn-default btn-lg" data-toggle="modal" data-target="#TecajSuccess"> PRIJAVI ME NA FOTOTEČAJ! </button> </div>
+                </div>
+              </div>
+
+              <div class = "col-xs-12" id = "PrijavaRadionicaContainer">
+                <h3 style = "text-align: center;"> Prijavi se na jednodnevnu radionicu fotografije! </h3>
+                <div style  = "text-align:center; margin-bottom: 5%;"><button type = "button" class = "btn btn-primary btn-lg" data-toggle = "collapse" data-target = "#PrijavaRadionica"> Klikni ovdje! </button> </div>
+                <div id = "PrijavaRadionica" class = "collapse">
+                  <form>
+                    <div class = "form-group">
+                      <label for = "ime"> Ime </label>
+                      <input type = "text" class = "form-control" id = "ime" placeholder: "Ime">
+                    </div>
+                    <div class = "form-group">
+                      <label for = "prezime"> Prezime </label>
+                      <input type = "text" class = "form-control" id = "prezime" placeholder: "Prezime">
+                    </div>
+                    <div class = "form-group">
+                      <label for = "email"> E-mail </label>
+                      <input type = "email" class = "form-control" id = "email" placeholder: "e-mail">
+                    </div>
+                    <div class = "form-group">
+                      <label for = "brojtelefona"> Broj mobitela </label>
+                      <input type = "tel" class = "form-control" id = "brojtelefona" placeholder: "+3859.....">
+                    </div>
+                  </form>
+                  <div style = "text-align:center; margin-bottom: 5%;"><button type = "button" class = "btn btn-primary btn-lg" data-toggle="modal" data-target="#RadionicaSuccess"> PRIJAVI ME NA FOTORADIONICU! </button> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id = "FollowUsFooterWrapper">
+          <div class = "container" id = "FollowUsFooter">
+            <div class = "row">
+              <div class = "col-xs-12 col-sm-4" id = "lijevo">
+                <a href = "https://www.kset.org/" target ="_blank">
+                  <%= image_tag 'kset_logo.jpg', class: 'img-responsive' %>
+                </a>
+              </div>
+              <div class = "col-xs-12 col-sm-4" id = "sredina">
+                <a href = "https://www.kset.org/club/multimedia/" target ="_blank">
+                  <%= image_tag 'ivona_1.jpg', class: 'img-responsive' %>
+                </a>
+              </div>
+              <div class = "col-xs-12 col-sm-4" id = "desno">
+                <a href = "https://www.facebook.com/ksetfoto?fref=ts" target ="_blank">
+                  <%= image_tag 'facebook_logo.jpg', class: 'img-responsive' %>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class = "container-fluid" id="bottom">
+          <div class = "row">
+            <p style = "text-align: center; padding-top: 5px;"> &#169; Fotosekcija KSET 2016. </p>
+          </div>
+        </div>
+
+        <a id = "BackToTop" href = "#"> <span class="glyphicon glyphicon-hand-up btn-default btn-lg" aria-hidden="true"></span> </a>
+
+
+
+
+
+
+      <div class="modal fade" id="TecajModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Prijavi se na tečaj fotografije</h4>
+            </div>
+            <div class="modal-body">
+
+          <form>
+            <div class = "form-group">
+              <label for = "ime"> Ime </label>
+              <input type = "text" class = "form-control" id = "ime" placeholder: "Ime">
+            </div>
+            <div class = "form-group">
+              <label for = "prezime"> Prezime </label>
+              <input type = "text" class = "form-control" id = "prezime" placeholder: "Prezime">
+            </div>
+            <div class = "form-group">
+              <label for = "email"> E-mail </label>
+              <input type = "email" class = "form-control" id = "email" placeholder: "e-mail">
+            </div>
+            <div class = "form-group">
+              <label for = "brojtelefona"> Broj mobitela </label>
+              <input type = "tel" class = "form-control" id = "brojtelefona" placeholder: "+3859.....">
+            </div>
+            <div> <label>Zainteresiran/a sam za</label> </div>
+            <div class = "radio">
+                <label><input type = "radio" name = "RadioOptions" id  ="Radio1" value = "option1"> Osnovni</label>
+            </div>
+            <div class = "radio">
+                <label><input type = "radio" name = "RadioOptions" id  ="Radio2" value = "option2"> Osnovni + Digitalni</label>
+            </div>
+            <div class = "radio">
+                <label><input type = "radio" name = "RadioOptions" id  ="Radio3" value = "option3"> Osnovni + Analogni</label>
+            </div>
+            <div class = "radio">
+                <label><input type = "radio" name = "RadioOptions" id  ="Radio4" value = "option4"> Osnovni + Analogni + Digitalni</label>
+            </div>
+            <div class = "radio">
+                <label><input type = "radio" name = "RadioOptions" id  ="Radio5" value = "option5"> Ne znam još :(</label>
+            </div>
+            </form>
+
+
+            </div>
+            <div class="modal-footer">
+              <button type = "button" class = "btn btn-default btn-lg" data-toggle="modal" data-target="#TecajSuccess"> PRIJAVI ME NA FOTOTEČAJ! </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="modal fade" id="RadionicaModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Prijavi se na jednodnevnu radionicu fotografije</h4>
+            </div>
+            <div class="modal-body">
+
+          <form>
+            <div class = "form-group">
+              <label for = "ime"> Ime </label>
+              <input type = "text" class = "form-control" id = "ime" placeholder: "Ime">
+            </div>
+            <div class = "form-group">
+              <label for = "prezime"> Prezime </label>
+              <input type = "text" class = "form-control" id = "prezime" placeholder: "Prezime">
+            </div>
+            <div class = "form-group">
+              <label for = "email"> E-mail </label>
+              <input type = "email" class = "form-control" id = "email" placeholder: "e-mail">
+            </div>
+            <div class = "form-group">
+              <label for = "brojtelefona"> Broj mobitela </label>
+              <input type = "tel" class = "form-control" id = "brojtelefona" placeholder: "+3859.....">
+            </div>
+          </form>
+
+
+            </div>
+            <div class="modal-footer">
+              <button type = "button" class = "btn btn-default btn-lg" data-toggle="modal" data-target="#RadionicaSuccess"> PRIJAVI ME NA FOTORADIONICU! </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="modal fade" id="TecajSuccess" tabindex="-1" role="dialog" aria-labelledby="RadionicaSuccessLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="RadionicaSuccessLabel">WOO HOO!!</h4>
+              </div>
+            <div class="modal-body">
+                Hvala na prijavi! Vaša prijava je zaprimljena. Dobit ćete mail s dodatnim informacijama nekoliko dana prije održavanja uvodnog predavanja.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close ClosePrijaveModal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">OK</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="modal fade" id="RadionicaSuccess" tabindex="-1" role="dialog" aria-labelledby="RadionicaSuccessLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="RadionicaSuccessLabel">WOO HOO!!</h4>
+              </div>
+            <div class="modal-body">
+                Hvala na prijavi! Vaša prijava je zaprimljena. Dobit ćete mail s dodatnim informacijama nekoliko dana prije održavanja fotoradionice.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close ClosePrijaveModal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">OK</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+      <script type = "text/javascript" src = "js/jquery.transit.min.js"></script>
+      <script type = "text/javascript" src = "js/script.min.js"></script>
+      <script type = "text/javascript" src = "js/lightbox.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    </body>
+  </html>
+

@@ -1,0 +1,256 @@
+@import 'application';
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'lightbox.min';
+
+#MonografijaOuter,
+#TamnaKomoraOuter {
+    color: #181818;
+    text-align: justify
+}
+
+#MonografijaOuter,
+#TamnaKomoraOuter,
+.ColumnContent {
+    text-align: justify
+}
+
+#desno,
+#sredina,
+body {
+    background-size: cover
+}
+
+#contact-info-wrapper,
+#lijevo {
+    background-color: #181818
+}
+
+#BackToTop,
+[hidden],
+template {
+    display: none
+}
+
+.label,
+sub,
+sup {
+    vertical-align: baseline
+}
+
+#desno,
+#lijevo,
+#sredina,
+svg:not(:root) {
+    overflow: hidden
+}
+
+#CoverTitle,
+button[disabled],
+html input[disabled] {
+    cursor: default
+}
+
+.btn-group>.btn-group,
+.btn-toolbar .btn,
+.btn-toolbar .btn-group,
+.btn-toolbar .input-group,
+.col-xs-1,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9,
+.dropdown-menu {
+    float: left
+}
+
+.navbar-fixed-bottom .navbar-collapse,
+.navbar-fixed-top .navbar-collapse,
+.pre-scrollable {
+    max-height: 340px
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0;
+    background-image: asset_url('logo-foto2-medium.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative
+}
+
+.onepage {
+    margin-top: 100vh;
+    margin-bottom: 100vh
+}
+
+.onepage-padding {
+    padding-top: 50vh;
+    padding-bottom: 50vh
+}
+
+#CoverTitle {
+    font-family: Arial;
+    font-size: 10em;
+    font-size: 10vw;
+    text-align: center;
+    letter-spacing: -.1em;
+    word-spacing: .1em;
+    padding-top: 41vh;
+    padding-bottom: 40vh;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.GalleryLSS {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 2.5%;
+    border-collapse: separate;
+    border-spacing: 10px
+}
+
+#MonografijaOuter {
+    background-color: #D0D0D0
+}
+
+#TamnaKomoraOuter {
+    background-color: #F60;
+    margin-bottom: 100vh
+}
+
+@media (max-width:991px) {
+    #PrijaveOuter {
+        background: linear-gradient(180deg, #d0d0d0 50%, #f60 50%);
+        color: #181818
+    }
+    #PrijavaTecajContainer {
+        background-color: #d0d0d0
+    }
+    #PrijavaRadionicaContainer {
+        background-color: #f60
+    }
+    .onepage {
+        margin-top: 15vh;
+        margin-bottom: 15vh
+    }
+    #TamnaKomoraOuter {
+        background-color: #F60;
+        color: #181818;
+        text-align: justify;
+        margin-bottom: 15vh
+    }
+    #contact-info-wrapper {
+        background-color: #181818;
+        color: #f60;
+        margin-top: 15vh
+    }
+}
+
+#sredina {
+    background-image: asset_url('ivona_1_blur.jpg');
+}
+
+#desno {
+    background-color: #3a579d
+}
+
+#desno.focus,
+#desno:hover,
+#lijevo:focus,
+#lijevo:hover,
+#sredina:focus,
+#sredina:hover {
+    z-index: 100;
+    box-shadow: 5px 5px 15px 1px #181818, -5px 5px 15px -1px #181818;
+    transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out
+}
+
+#BackToTop,
+#RadionicaModalButton,
+#TecajModalButton {
+    position: fixed;
+    z-index: 1000
+}
+
+@media (min-width:992px) {
+    #FollowUsFooterWrapper {
+        background: linear-gradient(90deg, #181818 50%, #3a579d 50%)
+    }
+}
+
+.img-fadein {
+    opacity: .65;
+    box-shadow: 0 5px 5px 1px #080808;
+    transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out
+}
+
+.img-fadein:focus,
+.img-fadein:hover {
+    opacity: 1;
+    box-shadow: 0 5px 5px 1px #101010
+}
+
+#BackToTop {
+    background-color: #D0D0D0;
+    border-radius: 5px;
+    bottom: 30px;
+    right: 30px
+}
+
+hr,
+img {
+    border: 0
+}
+
+#RadionicaContainer,
+#TecajContainer {
+    width: 100%
+}
+
+#TecajModalButton {
+    left: -100vw;
+    top: 25%;
+    height: 50%
+}
+
+#RadionicaModalButton {
+    right: -100vw;
+    top: 25%;
+    height: 50%;
+    background-color: #f60;
+    padding: 1%
+}
+
+#contact-info-wrapper {
+    color: #f60;
+    margin-top: 100vh
+}
+
+#become-a-photowan {
+    background-color: rgba(255, 255, 255, .15);
+    color: #d0d0d0
+}
