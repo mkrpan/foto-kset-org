@@ -1,0 +1,24 @@
+.container
+  .row
+    .col-xs-12
+      h1 Application ##{@application.id}
+    .col-md-6
+      | Name: #{@application.last_name}, #{@application.first_name}
+    .col-md-6
+      | Email: #{@application.email}
+    .col-md-6
+      | Mobile phone: #{@application.mobile_phone}
+    .col-md-6
+      | Season: #{@application.season.title}
+
+  .row
+    .col-xs-12
+      hr
+    .col-xs-12
+      = link_to [:admin, @application.season], class: 'btn btn-lg btn-success'
+        = icon('sign-in')
+        | Go to Season
+      = link_to :back, class: 'btn btn-lg btn-primary'
+        = icon('chevron-left')
+        | Back
+

@@ -26,3 +26,10 @@
         tbody
           - @season.applications.order(created_at: :desc).each do |application|
             = render 'admin/applications/application', application: application
+  .row
+    .col-xs-12
+      hr
+    .col-xs-12
+      = link_to :back, class: 'btn btn-lg btn-primary'
+        = icon('chevron-left')
+        | Back

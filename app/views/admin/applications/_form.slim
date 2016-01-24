@@ -1,0 +1,31 @@
+= simple_form_for [:admin, application] do |f|
+  .row
+    .col-md-6
+      = f.input :first_name
+    .col-md-6
+      = f.input :last_name
+    .col-md-6
+      = f.input :email
+    .col-md-6
+      = f.input :mobile_phone
+  .row
+    .col-md-6
+      = f.association :season, collection: Season.all
+  .row
+    .col-xs-12
+      hr
+
+      button.btn.btn-success.btn-lg
+        = icon('check')
+        | Save
+
+      = link_to :back, class: 'btn btn-primary btn-lg'
+        = icon('chevron-left')
+        | Back
+
+    .col-xs-12
+      - if application.created_at.present?
+        p.help-block Created at: #{application.created_at.strftime('%d.%m.%Y %H:%M')}
+
+      - if application.updated_at.present?
+        p.help-block Updated at: #{application.updated_at.strftime('%d.%m.%Y %H:%M')}
