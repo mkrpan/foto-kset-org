@@ -1,7 +1,7 @@
 module Admin
   class SeasonsController < AuthorizedController
     def index
-      @seasons = season_scope
+      @seasons = season_scope.order(start_date: :desc, end_date: :desc)
     end
 
     def show

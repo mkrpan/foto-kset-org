@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'landing#index'
 
   namespace :admin do
-    root to: 'applications#index'
+    root to: 'seasons#index'
     resources :applications
     resources :seasons
   end

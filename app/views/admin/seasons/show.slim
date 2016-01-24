@@ -1,0 +1,28 @@
+.container
+  .row
+    .col-xs-12
+      h1 = @season.title
+  .row
+    .col-md-6
+      | Starts at: #{@season.start_date.strftime('%d.%m.%Y %H:%M')}
+    .col-md-6
+      | Ends at: #{@season.end_date.strftime('%d.%m.%Y %H:%M')}
+    .col-xs-12
+      | Type: #{@season.type.titleize}
+  .row
+    .col-xs-12
+      hr
+    .col-xs-12
+      h2 Applications
+    .col-xs-12
+      table.table.table-striped
+        thead
+          tr
+            th ID
+            th First name
+            th Last name
+            th Season
+            th
+        tbody
+          - @season.applications.order(created_at: :desc).each do |application|
+            = render 'admin/applications/application', application: application

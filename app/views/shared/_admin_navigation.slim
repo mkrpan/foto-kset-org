@@ -15,12 +15,18 @@ nav.navbar.navbar-default
         li.dropdown
           = link_to '#', class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
             = current_user.email
-            span.carret
+            = icon('caret-down')
 
           ul.dropdown-menu
-            li = link_to 'My profile', '#'
+            li
+              = link_to '#'
+                = icon(:user)
+                | My profile
             li.divider
-            li = link_to 'Logout', destroy_user_session_path, method: :delete
+            li
+              = link_to destroy_user_session_path, method: :delete
+                = icon('sign-out')
+                | Logout
 
       ul.nav.navbar-nav.navbar-right
         = active_link_to [:admin, :applications], active: :inclusive, wrap_tag: :li do

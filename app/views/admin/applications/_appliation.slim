@@ -1,0 +1,16 @@
+tr
+  th = application.id
+  th = application.first_name
+  th = application.last_name
+  th = application.season.title
+  th
+    .pull-right
+      = link_to [:admin, application], class: 'btn btn-xs btn-primary'
+        = icon(:eye)
+        | Show
+      = link_to [:edit, :admin, application], class: 'btn btn-xs btn-info'
+        = icon(:edit)
+        | Edit
+      = link_to [:admin, application], class: 'btn btn-xs btn-danger', method: :delete, data: { confirm: 'Are you sure you want to delete this application?' }
+        = icon('trash-o')
+        | Delete

@@ -15,17 +15,18 @@ class Season < ActiveRecord::Base
   self.inheritance_column = :_type_disabled
 
   enum type: [:course, :workshop]
+  has_many :applications
 
   validates :title, presence: true
   validates :start_date, presence: true
-  validates :end_time, presence: true
+  validates :end_date, presence: true
   validates :type, presence: true
   validate :end_time_is_after_start_time
 
   def end_time_is_after_start_time
-    return if end_time.blank? || start_time.blank?
-    return unless end_time < start_time
+    return if end_date.blank? || start_date.blank?
+    return unless end_date < start_date
 
-    errors.add(:end_time, 'cannot be before the start time')
+    errors.add(:end_date, 'cannot be before the start time')
   end
 end
