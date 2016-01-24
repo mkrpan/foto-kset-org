@@ -7,7 +7,7 @@
       <meta charset = "utf-8">
       <meta name = "viewport" content = "width = device-width, initial-scale = 1">
       <link href='https://fonts.googleapis.com/css?family=Oxygen&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-      <link rel  = "shortcut icon" type="image/png" href="favicon.png"/>
+      <link rel  = "shortcut icon" type="image/png" href="<%= image_path('favicon.png') %>"/>
       <title> Fotosekcija KSET </title>
     </head>
 
@@ -64,20 +64,26 @@
             <table class = "GalleryLSS">
               <thead>
                 <tr>
-                  <th colspan = "2"> <a href = "images/dino1.jpg" data-lightbox = "onama">
+                  <th colspan = "2">
+                    <%= link_to image_path('dino1.jpg'), data: { lightbox: 'onama' } do %>
                       <%= image_tag 'dino1.jpg', class: 'img-responsive img-fadein'%>
+                    <% end %>
                   </th>
                 </tr>
               </thead>
 
               <tbody>
                 <tr>
-                  <td> <a href = "images/matej1.jpg" data-lightbox = "onama">
-                    <%= image_tag 'matej1.jpg', class: 'img-responsive img-fadein'%>
+                  <td>
+                    <%= link_to image_path('matej1.jpg'), data: { lightbox: 'onama' } do %>
+                      <%= image_tag 'matej1.jpg', class: 'img-responsive img-fadein'%>
+                    <% end %>
                   </td>
 
-                  <td> <a href = "images/dino2.jpg" data-lightbox = "onama">
-                    <%= image_tag 'dino2.jpg', class: 'img-responsive img-fadein'%>
+                  <td>
+                    <%= link_to image_path('dino2.jpg'), data: { lightbox: 'onama' } do %>
+                      <%= image_tag 'dino2.jpg', class: 'img-responsive img-fadein'%>
+                    <% end %>
                   </td>
                 </tr>
               </tbody>
@@ -97,20 +103,26 @@
                 <table class = "GalleryLSS">
                   <thead>
                     <tr>
-                      <th colspan = "2"> <a href = "images/tecaj_screenshot.png" data-lightbox = "tecaj">
-                        <%= image_tag 'tecaj_screenshot.png', class: 'img-responsive img-fadein'%>
+                      <th colspan = "2">
+                        <%= link_to image_path('tecaj_screenshot.png'), data: { lightbox: 'tecaj' } do %>
+                          <%= image_tag 'tecaj_screenshot.png', class: 'img-responsive img-fadein'%>
+                        <% end %>
                       </th>
                     </tr>
                   </thead>
 
                   <tbody>
                     <tr>
-                      <td> <a href = "images/tecaj_zajednicko1.jpg" data-lightbox = "tecaj">
-                        <%= image_tag 'tecaj_zajednicko1.jpg', class: 'img-responsive img-fadein'%>
+                      <td>
+                        <%= link_to image_path('tecaj_zajednicko1.jpg'), data: { lightbox: 'tecaj' } do %>
+                          <%= image_tag 'tecaj_zajednicko1.jpg', class: 'img-responsive img-fadein'%>
+                        <% end %>
                       </td>
 
-                      <td> <a href = "images/tecaj_zajednicko2.jpg" data-lightbox = "tecaj">
-                        <%= image_tag 'tecaj_zajednicko2.jpg', class: 'img-responsive img-fadein'%>
+                      <td>
+                        <%= link_to image_path('tecaj_zajednicko2.jpg'), data: { lightbox: 'tecaj' } do %>
+                          <%= image_tag 'tecaj_zajednicko2.jpg', class: 'img-responsive img-fadein'%>
+                        <% end %>
                       </td>
                     </tr>
                   </tbody>
@@ -166,20 +178,26 @@
                 <table class = "GalleryLSS">
                   <thead>
                     <tr>
-                      <th colspan = "2"> <a href = "images/radionica_prakticni3.jpg" data-lightbox = "radionica">
-                        <%= image_tag 'radionica_prakticni3.jpg', class: 'img-responsive img-fadein'%>
+                      <th colspan = "2">
+                        <%= link_to image_path('radionica_prakticni3.jpg'), data: { lightbox: 'tecaj' } do %>
+                          <%= image_tag 'radionica_prakticni3.jpg', class: 'img-responsive img-fadein'%>
+                        <% end %>
                       </th>
                     </tr>
                   </thead>
 
                   <tbody>
                     <tr>
-                      <td> <a href = "images/radionica_prakticni1.jpg" data-lightbox = "radionica">
-                        <%= image_tag 'radionica_prakticni1.jpg', class: 'img-responsive img-fadein'%>
+                      <td>
+                        <%= link_to image_path('radionica_prakticni1.jpg'), data: { lightbox: 'tecaj' } do %>
+                          <%= image_tag 'radionica_prakticni1.jpg', class: 'img-responsive img-fadein'%>
+                        <% end %>
                       </td>
 
-                      <td> <a href = "images/radionica_prakticni2.jpg" data-lightbox = "radionica">
-                        <%= image_tag 'radionica_prakticni2.jpg', class: 'img-responsive img-fadein'%>
+                      <td>
+                        <%= link_to image_path('radionica_prakticni2.jpg'), data: { lightbox: 'tecaj' } do %>
+                          <%= image_tag 'radionica_prakticni2.jpg', class: 'img-responsive img-fadein'%>
+                        <% end %>
                       </td>
                     </tr>
                   </tbody>
@@ -301,7 +319,7 @@
                   </div>
 
                   <div class = "item">
-                    <%= image_tag 'druzenja/2.jpg'%>
+                    <%= image_tag 'druzenja/2.JPG'%>
                     <div class = "carousel-caption">
                       <h3> Zagrebački rally </h3>
                       <p> Članovi fotosekcije na Zagrebačkom rally u organizaciji P.I.J.A.N.D.U.R.E.-a </p>

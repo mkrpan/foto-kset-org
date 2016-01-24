@@ -3,10 +3,34 @@
 @import 'bootstrap';
 @import 'lightbox.min';
 
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+}
+
+a {
+  color: #f60;
+
+  &:hover {
+    color: #b34700;
+  }
+}
+
+.btn {
+  &.btn-primary, &.btn-primary:active:focus {
+    background-color: #e5e5e5;
+    border-color: #e5e5e5;
+    color: #181818;
+  }
+}
+
 #MonografijaOuter,
 #TamnaKomoraOuter {
     color: #181818;
-    text-align: justify
+    text-align: justify;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #181818;
+    }
 }
 
 #MonografijaOuter,
@@ -23,7 +47,11 @@ body {
 
 #contact-info-wrapper,
 #lijevo {
-    background-color: #181818
+    background-color: #181818;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #f60;
+    }
 }
 
 #BackToTop,
@@ -89,7 +117,8 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
-    position: relative
+    position: relative;
+    color: #fff;
 }
 
 .onepage {
