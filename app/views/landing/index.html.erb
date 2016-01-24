@@ -6,7 +6,6 @@
     <head>
       <meta charset = "utf-8">
       <meta name = "viewport" content = "width = device-width, initial-scale = 1">
-      <link href='https://fonts.googleapis.com/css?family=Oxygen&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
       <link rel  = "shortcut icon" type="image/png" href="<%= image_path('favicon.png') %>"/>
       <title> Fotosekcija KSET </title>
     </head>
@@ -96,7 +95,9 @@
           <div class = "container onepage">
             <div class = "row">
 
-              <button type="button" class="btn btn-primary btn-lg hidden-xs hidden-sm" data-toggle="modal" data-target="#TecajModal" id ="TecajModalButton">Prijavi se <br>na tečaj </button>
+              <% if true %>
+                <button type="button" class="btn btn-primary btn-lg hidden-xs hidden-sm" data-toggle="modal" data-target="#TecajModal" id ="TecajModalButton">Prijavi se <br>na tečaj </button>
+              <% end %>
 
               <div class = "col-xs-12 col-md-6">
 
@@ -157,7 +158,9 @@
         <div id="RadionicaContainer">
           <div class = "container onepage">
             <div class = "row">
-              <button type="button" class="btn btn-primary btn-lg hidden-xs hidden-sm" data-toggle="modal" data-target="#RadionicaModal" id ="RadionicaModalButton">Prijavi se <br>na <br>jednodnevnu <br>fotoradionicu </button>
+              <% if true %>
+                <button type="button" class="btn btn-primary btn-lg hidden-xs hidden-sm" data-toggle="modal" data-target="#RadionicaModal" id ="RadionicaModalButton">Prijavi se <br>na <br>jednodnevnu <br>fotoradionicu </button>
+              <% end %>
               <div class = "col-xs-12 col-md-6">
                 <div class = "ColumnContent" id="ORadionici">
 
