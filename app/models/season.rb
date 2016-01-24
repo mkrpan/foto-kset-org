@@ -4,7 +4,7 @@ class Season < ActiveRecord::Base
   enum type: [:course, :workshop]
 
   validates :title, presence: true
-  validates :start_date, present: true
+  validates :start_date, presence: true
   validates :end_time, presence: true
   validates :type, presence: true
   validate :end_time_is_after_start_time
