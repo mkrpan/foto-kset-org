@@ -20,9 +20,13 @@ nav.navbar.navbar-default
           ul.dropdown-menuv
 
       ul.nav.navbar-nav.navbar-right
-        = active_link_to apps_path, active: :inclusive, wrap_tag: :li do
+        = active_link_to applications_path, active: :inclusive, wrap_tag: :li do
           = icon('database')
           | Applications
+
+        = active_link_to seasons_path, active: :inclusive, wrap_tag: :li do
+          = icon('calendar')
+          | Seasons
 
         = active_link_to users_path, active: :inclusive, wrap_tag: :li do
           = icon('users')
