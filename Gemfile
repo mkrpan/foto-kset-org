@@ -11,6 +11,7 @@ gem 'active_link_to'
 gem 'dotenv-rails'
 gem 'phrasing'
 gem 'therubyracer'
+gem 'puma'
 
 # CSS
 gem 'sass-rails', '~> 5.0'
@@ -32,7 +33,7 @@ group :development do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'spring'
-  gem 'puma'
   gem 'mina', require: false
   gem 'mina-dotenv', require: false
+  gem 'mina-puma', require: false
 end

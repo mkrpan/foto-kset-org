@@ -2,6 +2,7 @@ require 'mina/bundler'
 require 'mina/rails'
 require 'mina/git'
 require 'mina/dotenv'
+require 'mina/puma'
 
 set :domain, '161.53.74.113'
 set :deploy_to, '/home/foto/foto_kset_org'
@@ -9,7 +10,7 @@ set :repository, 'git@github.com:KSET/foto-kset-org.git'
 set :branch, 'master'
 set :user, 'foto'
 
-set :shared_paths, ['log', '.env']
+set :shared_paths, ['log', '.env', 'tmp/pids', 'tmp/sockets']
 
 task deploy: :stages do
   deploy do
@@ -42,6 +43,10 @@ end
 task setup: :stages do
   queue! %(mkdir -p "#{deploy_to}/shared/log")
   queue! %(chmod g+rx,u+rwx "#{deploy_to}/shared/log")
+  queue! %(mkdir -p "#{deploy_to}/#{shared_path}/tmp/sockets")
+  queue! %(chmod g+rx,u+rwx "#{deploy_to}/#{shared_path}/tmp/sockets")
+  queue! %(mkdir -p "#{deploy_to}/#{shared_path}/tmp/pids")
+  queue! %(chmod g+rx,u+rwx "#{deploy_to}/#{shared_path}/tmp/pids")
 end
 
 # Tail log from server
@@ -52,6 +57,7 @@ end
 # Restart application after deployment
 task :restart_application do
   queue %(echo "-----> Restarting application")
-  queue "mkdir -p #{deploy_to}/#{current_path}/tmp/"
-  queue "touch #{deploy_to}/#{current_path}/tmp/restart.txt"
+  # queue "mkdir -p #{deploy_to}/#{current_path}/tmp/"
+  # queue "touch #{deploy_to}/#{current_path}/tmp/restart.txt"
+  invoke :'puma:phased_restart'
 end

@@ -108,6 +108,8 @@ GEM
       mina
       mina-scp
       thor
+    mina-puma (0.2.0)
+      mina
     mina-scp (0.1.2)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
@@ -238,6 +240,7 @@ DEPENDENCIES
   lightbox2-rails
   mina
   mina-dotenv
+  mina-puma
   pg (~> 0.15)
   phrasing
   pry-rails
