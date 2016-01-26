@@ -47,4 +47,20 @@ $(document).ready(function() {
   }), $(".ClosePrijaveModal").click(function() {
     $("#TecajModal, #RadionicaModal").modal("hide");
   });
+
+  $('#SubmitRadionica').click(function() {
+    $('.modal-body .workshop-form-container form').submit();
+  });
+
+  $('#SubmitTecaj').click(function() {
+    $('.modal-body .course-form-container form').submit();
+  });
+
+  $('#SubmitInlineRadionica').click(function() {
+    $('#PrijavaRadionica .workshop-form-container form').submit();
+  });
+
+  $('#SubmitInlineTecaj').click(function() {
+    $('#PrijavaTecaj .workshop-form-container form').submit();
+  });
 });

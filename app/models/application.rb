@@ -11,6 +11,7 @@
 #  season_id    :integer
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  interest     :integer
 #
 
 class Application < ActiveRecord::Base
@@ -21,4 +22,14 @@ class Application < ActiveRecord::Base
   validates :email, presence: true
   validates :mobile_phone, presence: true
   validates :season, presence: true
+
+  def self.interests_collection
+    {
+      0 => 'Osnovni',
+      1 => 'Osnovni + Digitalni',
+      2 => 'Osnovni + Analogni',
+      3 => 'Osnovni + Analogni + Digitalni',
+      4 => 'Ne znam još :('
+    }
+  end
 end

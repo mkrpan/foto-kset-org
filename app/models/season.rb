@@ -5,7 +5,7 @@
 #  id         :integer          not null, primary key
 #  title      :string           default(""), not null
 #  start_date :datetime         not null
-#  end_time   :datetime         not null
+#  end_date   :datetime         not null
 #  type       :integer          default(0), not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
@@ -22,6 +22,10 @@ class Season < ActiveRecord::Base
   validates :end_date, presence: true
   validates :type, presence: true
   validate :end_time_is_after_start_time
+
+  scope :for_time, lambda { |time|
+    where('start_date <= :time AND end_date >= :time', time: time)
+  }
 
   def end_time_is_after_start_time
     return if end_date.blank? || start_date.blank?

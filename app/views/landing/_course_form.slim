@@ -1,0 +1,7 @@
+= simple_form_for application, remote: true do |f|
+  = f.input :first_name, label: 'Ime'
+  = f.input :last_name, label: 'Prezime'
+  = f.input :email
+  = f.input :mobile_phone, label: 'Broj mobitela'
+  = f.input :interest, label: 'Zainteresiran/a sam za', collection: Application.interests_collection.to_a, label_method: :last, value_method: :first, as: :radio_buttons
+  = f.association :season, input_html: { hidden: true }, selected: season.id, label: false

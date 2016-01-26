@@ -1,0 +1,16 @@
+<% if @season.type == :course
+  form = 'landing/course_form'
+  container = '.course-form-container'
+  notification_modal = '#TecajSuccess'
+else
+  form = 'landing/workshop_form'
+  container = '.workshop-form-container'
+  notification_modal = '#RadionicaSuccess'
+end %>
+
+<% if @success %>
+  $("<%= notification_modal %>").modal('show');
+  $("<%= container%>").html("<%= j render form, application: Application.new, season: @season %>");
+<% else %>
+  $("<%= container%>").html("<%= j render form, application: @application, season: @season %>");
+<% end %>
