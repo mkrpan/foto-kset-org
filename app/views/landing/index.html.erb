@@ -24,7 +24,11 @@
 <div class = "container-fluid">
   <div class = "row">
     <div class = "col-xs-12">
-      <h1 id = "CoverTitle"> <strong>Fotosekcija KSET-a</strong></h1>
+      <h1 id = "CoverTitle">
+        <strong>
+          <%= phrase('main-title') %>
+        </strong>
+      </h1>
     </div>
   </div>
 </div>
@@ -36,13 +40,9 @@
     <div class = "col-xs-12 col-md-6">
       <div class = "ColumnContent" id="OFotosekciji">
 
-        <h2> O Fotosekciji </h2>
+        <h2> <%= phrase('about-title') %> </h2>
+        <%= phrase('about-content') %>
 
-        <p> Fotografska sekcija koja je danas jedna od devet sekcija <a href = "https://www.kset.org/" target = "_blank">Kluba studenata elektrotehnike i računarstva (KSET)</a>, nastala je najkasnije 1965. godine na tadašnjem ETF-u (danas FER). Prije nego što se 1976. godine pridružila KSET-u, njezin foto-laboratorij nalazio se u prizemlju A zgrade, a danas je smješten u sjeveroistočnome uglu KSET-a. Dok KSET još nije otvorio svoja vrata, Fotosekcija je surađivala s Našim Listom i održavala foto-tečaje. </p>
-
-        <p> Danas je Fotosekcija studentska amaterska zajednica ljubitelja fotografije koja broji oko trideset aktivnih članova i posjeduje profesionalnu fotografsku opremu, studijsku rasvjetu, tamnu komoru i računala za obradu fotografija. S ciljem promicanja znanja o fotografiji, u sklopu Fotosekcije se jednom do dvaput godišnje održava foto-tečaj i nešto češće jednodnevna foto-radionica, na koje su dobrodošli svi bez obzira na dob. Radom u tamnoj komori potiče se očuvanje tradicionalne analogne fotografije, dok se plodovi rada članova sekcije mogu vidjeti kroz samostalne i zajedničke izložbe.</p>
-
-        <p> S ciljem dokumentiranja povijesti KSET-a, fotografiraju se svi <a href = "https://www.kset.org/gallery/live/" target = "_blank">koncerti i ostali događaji </a>, a sve fotografije mogu se pronaći na službenim stranicama. </p>
       </div>
     </div>
 
@@ -122,21 +122,9 @@
       <div class = "col-xs-12 col-md-6">
         <div class = "ColumnContent" id="OTecaju">
 
-          <h2> O Tečaju </h2>
+          <h2> <%= phrase('course-title') %> </h2>
+          <%= phrase('course-content') %>
 
-          <p> Fotosekcija već 40 godina organizira tečajeve fotografije za početnike. U zadnjih je 10 godina organizirano otprilike 20 tečajeva fotografije koje je pohađalo sveukupno više od 600 polaznika.</p>
-
-          <p> Tečaj fotografije se održava u oba semestra tijekom akademske godine i sastoji se od tri modula: osnovnog, digitalnog i analognog. U sklopu osnovnog modula tečaja održava se 8 predavanja u trajanju od 2 školska sata i dvije praktične radionice u trajanju od 3 sata. Digitalni modul i analogni modul sastoje se od 4 predavanja u trajanju od 2 školska sata. Svaki polaznik bira želi li pohađati analogni ili digitalni modul (ili oba). Praktični dio tečaja uključuje zajedničko fotografiranje po Zagrebu, rad u tamnoj komori za analogni modul (razvijanje negativa i pozitiva) i digitalna obrada fotografije za digitalni modul (tri dodatna predavanja i laboratorij digitalne obrade fotografija).Na kraju tečaja polaznici će izložiti svoje fotografije koje su kreirali tijekom tečaja u izložbenom prostoru KSET-a. </p>
-
-          <p> <strong>Cijene tečaja su sljedeće:
-            <ul>
-              <li> Osnovni modul: 450 kn </li>
-              <li> Osnovni + Digitalni modul: 650 kn</li>
-              <li> Osnovni + Analogni modul: 650 kn </li>
-              <li> Osnovni + Analogni + Digitalni modul: 750 kn </li>
-            </ul>
-            </strong>
-          </p>
         </div>
       </div>
     </div>
@@ -154,16 +142,9 @@
       <div class = "col-xs-12 col-md-6">
         <div class = "ColumnContent" id="ORadionici">
 
-          <h2> O Radionici </h2>
+          <h2> <%= phrase('workshop-title') %> </h2>
+          <%= phrase('workshop-content') %>
 
-
-          <p> Jednodnevna fotografska radionica traje 6 sati. Sastoji se od trosatnog teorijskog dijela i trosatnog praktičnog dijela te je namijenjena je početnicima i svima koji žele zakoračiti u svijet fotografije.</p>
-
-          <p> Teorijski dio sastoji se od tri predavanja: "Kontrola postavki", "Vrste fotoaparata i objektiva" i "Kompozicija". Na teorijskom dijelu nau�it ćete što znače sve one silne oznake i pojmovi na koje ste možda naišli: "50mm f/2.8", "brzina zatvarača 1/2000", "dubinska oštrina" i sl. Naučit ćete ćemu služe svi oni silni gumbići na fotoaparatu i osnovna pravila kompozicije. Kupujete novi fotić i ne znate koji biste? Na kraju radionice znat ćete i odgovor na to pitanje. </p>
-
-          <p> Na praktičnom dijelu sve naučeno u teoriji primijenit ćete u praksi na vašim ili našim fotoaparatima uz pratnju iskusnih članova fotosekcije. Proći ćemo kroz sve postavke i mogućnosti fotoaparata na licu mjesta. </p>
-
-          <p> <strong>Cijena radionice je 200 kn</strong>, dok učenici i studenti uz predočenje indeksa/iksice dobivaju 50% popusta i za njih je cijena radionica 100 kn. </p>
         </div>
       </div>
 
@@ -208,12 +189,9 @@
       <div class = "col-xs-12 col-md-6">
         <div id = "MonografijaTekst">
 
-          <h2> Monografija </h2>
+          <h2> <%= phrase('monography-title') %> </h2>
+          <%= phrase('conography-content') %>
 
-          <p> Nije prvi put da se netko sjetio da bi bilo zgodno napraviti knjigu o KSET-u, ali je jedini puta do sada da se uspjelo dogurati do kraja... </p>
-          <p> Monografija KSET-a na petstotrideset i šest (536!) ful kolor stranica; jedan od velikih projekata foto sekcije, na kojemu je čitavo foto-članstvo radilo gotovo tri godine, kako bi slikom i riječi obuhvatilo prve 32 godine najdražeg nam Kluba...
-          Knjiga o ksetovcima i svim njihovim malim i velikim pothvatima, zbog kojih je KSET postao i ostao nezaboravno mjesto kakvim ga svi znamo... sve što vidite oko sebe čim pređete prag, njihovih je ruku djelo; od uređenja prostora, organizacije koncerta kojeg slušate, izložbi koje vise... A ima tu još puno, puno više toga sto se u KSET-u radi... Mi smo to samo sačuvali kako se ne bi zaboravilo, izgubilo: od ksetovaca za ksetovce. </p>
-          <p> Zavirite i pronađite sliku mame, tate, strica, tetke, sestre, brata, svoju... ili samo provjerite što se sve dešavalo u prostorima kotlovnice u prvih trideset i dvije godine njena postojanja. I uživajte. </p>
         </div>
       </div>
 
@@ -234,15 +212,8 @@
       <div class = "col-xs-12">
         <div id = "TamnaKomoraTekst">
 
-          <h2> Tamna komora </h2>
-
-          <p> Jedna od glavnih zadaća i tradicija Fotosekcije jest očuvanje analogne fotografije. U skromnom prostoru Fotosekcije nalazi se i tamna komora koju besplatno mogu koristiti svi naši članovi. </p>
-
-          <p> Od kemije za negativ proces, zbog sve oskudnije ponude fotokemije na našem tržištu, najviše koristimo Fomadon. No kroz povijest sekcije, svoje mjesto pod suncem imali su i FR-16, ID-11, D76, Microphen i Perceptol. Od fiksira tu su se najčešće koristili i još se koriste, Hypam i FF-2. Pozitive razvijamo u PQ Universalu i fiskiramo u Rapid Fix-u. </p>
-
-          <p> Od ostalog pribora, vrijedno je spomenuti i aparat za povećavanje, hladnjak za kemiju, pozamašnu količinu filmova (uglavnom Fomapana, ali i ponešto Ilforda i TriX-a za svečanije prigode) i papira (opet uglavnom Fominih, ali i police i police tko zna koliko starih neiskorištenih fotopapira). Imamo i nemali broj doza i spirala, štipaljki i kadica. Tu su i tri izvora crvenog svjetla (dva iz obične žarulje preko koje je crveni filter i jedan iz LED dioda). Svu potrošenu kemiju pretačemo u dvije 50 litarske bačve koje zatim odnosimo na zbrinjavanje. </p>
-
-          <p> U neposrednoj blizini komore nalazi se i Epsonov skener za filmove, foto-printer i dva računala za obradu fotografija. Osim toga, tu je i ormarić za sušenje filmova. </p>
+          <h2> <%= phrase('darkroom-title') %> </h2>
+          <%= phrase('darkroom-content') %>
 
         </div>
       </div>
@@ -256,28 +227,38 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12" id="Fotoaktivnosti">
-            <h2> Fotoaktivnosti </h2>
-            <p style="border-bottom: 1px solid #d0d0d0;"> Dušu fotosekcije čine njezini članovi. Fotosekcija je uspješna onoliko koliko se njenim članovima da ulagati svoje vrijeme u nju. Imali smo sre�u da je unazad pet godina Fotosekcija vrlo aktivna i da su njezini članovi postali vrlo bliski i da su se razvila doživotna prijateljstva, ali i ljubavi. :) </p>
+            <h2> <%= phrase('activities-title') %> </h2>
+            <p style="border-bottom: 1px solid #d0d0d0;">
+              <%= phrase('activities-section-1-content') %>
+            </p>
         </div>
     </div>
 
     <div class="row">
         <div class="col-xs-12 col-sm-6 ColumnContent">
-            <p style="border-bottom: 1px solid #d0d0d0;"> Sastanci Fotosekcije vrlo često završe sekcijskom pivom u Piccolu ili u jednoj od mnogih pivovara u centru Zagreba na inicijativu sekcijskih ljubitelja craft piva, a nerijetko ostanemo i na KSET-ovim Caffeima plešući fotoples, nagovarajući mlađe članove da fotkaju ljude i da fotkaju spontane pozerske fotografije nas ostalih kako bi naša druženja zauvijek ostala sačuvana. Tako se jednom dogodila situacija da je Fotosekcija svojim druženjima spojila dva dežurstva - drugim riječima, svaki dan smo se negdje družili 7 dana za redom do novog dežurstva. </p>
+          <p style="border-bottom: 1px solid #d0d0d0;">
+            <%= phrase('activities-section-2-content') %>
+          </p>
         </div>
 
         <div class="col-xs-12 col-sm-6 ColumnContent">
-            <p style="border-bottom: 1px solid #d0d0d0;"> Nabavkom studijske rasvjete, započeli smo i s random fotosessionima isprobavajući svakakve lude ideje, a kod takvih druženja često padne i fotokuhinja gdje su palačinke omiljeni specijalitet svih nas. Iz fotosekcijske tvornice ideja, iznikli su i Grumpy Santa fotkanje gdje gosti KSET-a mogu napraviti Božićnu fotku sa službenim KSETovim Djedicom Koji je Mrtav Iznutra i Mrzi Ljude. Također svako malo organiziramo i besplatno fotkanje za dokumente - od indeksa, iksice, pokaza, osobne i putovnice do vize za Amerike. </p>
+          <p style="border-bottom: 1px solid #d0d0d0;">
+            <%= phrase('activities-section-3-content') %>
+          </p>
         </div>
     </div>
 
     <div class="row">
         <div class="col-xs-12 col-sm-6 ColumnContent">
-            <p style="border-bottom: 1px solid #d0d0d0;"> Da razbijemo monotoniju, fotosekcija u zadnje vrijeme često ide zajedno na izlete. Osim Rally-ija i planinarskih izleta koje organiziraju <a href="http://pijandure.kset.org/" target="_blank">P.I.J.A.N.D.U.R.E. </a>, Fotosekcija je bila i na četverodnevnom izletu u Sarajevu (dva puta!), četverodnevnom ljetovanju u Splitu, neki su potegli i do Cavtata, a posjetit će i Beograd, Gardaland i Budimpeštu. Također, surađivali smo s raznim udrugama, te smo posjetili i Ludbreg i Orahovicu. </p>
+          <p style="border-bottom: 1px solid #d0d0d0;">
+            <%= phrase('activities-section-4-content') %>
+          </p>
         </div>
 
         <div class="col-xs-12 col-sm-6 ColumnContent">
-            <p style="border-bottom: 1px solid #d0d0d0;"> Pod kontrolom fotosekcije je i izložbeni prostor u KSET-u koji se sastoji od tri velika pleksija u separeima, ali i tri manja pleksija na ogledalima u glavnoj dvorani KSET-a. Na tim prostorima izlažu se samostalne i zajedničke izložbe članova fotosekcije, izložbe polaznika tečaja, retrospektive koncerata, radova za Skupštinu i Brucošijadu FER-a. Fotografije s Brucošijade FER-a izlažemo u predvorju FER-a na panoima. </p>
+          <p style="border-bottom: 1px solid #d0d0d0;">
+            <%= phrase('activities-section-5-content') %>
+          </p>
         </div>
     </div>
 </div>
@@ -404,8 +385,8 @@
         <div class="row">
             <div class="col-xs-12" id="Kontakt">
 
-                <h2> Kontakt </h2>
-                <p> Javite se na <strong><u>foto-info@kset.org</u></strong> za vi��e informacija o tečaju, radionici i monografiji ili ako vam je dosadno i želite pričati s nekim. Mi jako volimo odgovarati na mailove! :) </p>
+                <h2> <%= phrase('contact-title') %> </h2>
+                <%= phrase('contact-content') %>
 
             </div>
         </div>
@@ -421,11 +402,8 @@
     <div class="container onepage-padding">
         <div class="row">
             <div class="col-xs-12" id="PostaniClan">
-                <h2> Postani član! </h2>
-                <p>
-                    Ovdje ide tekst kako smo super i zašto bi nam se netko pridružio. Javi se na foto-info@kset.org, potraži nas na fejsu,
-                    pošalji mail trenutnom voditelju sekcije (hint: mail je na KSETovoj stranici), pitaj na šanku KSET-a za Fotosekciju ili dođi na jedan od naših sastanaka petkom u 19h u KSET-u.
-                </p>
+                <h2> <%= phrase('members-title') %> </h2>
+                <%= phrase('members-content') %>
             </div>
         </div>
     </div>
@@ -496,7 +474,7 @@
 
 <div class = "container-fluid" id="bottom">
   <div class = "row">
-    <p style = "text-align: center; padding-top: 5px;"> &#169; Fotosekcija KSET 2016. </p>
+    <p style = "text-align: center; padding-top: 5px;"> <%= phrase('copyright') %> </p>
   </div>
 </div>
 

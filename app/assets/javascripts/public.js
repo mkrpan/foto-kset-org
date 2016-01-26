@@ -1,6 +1,8 @@
 //= require application
 //= require jquery.transmit.min
 //= require lightbox
+//= require jquery.cookie
+//= require phrasing
 
 $(document).ready(function() {
   $("#TecajContainer").mouseenter(function() {

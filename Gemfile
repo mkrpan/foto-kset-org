@@ -9,6 +9,7 @@ gem 'kaminari'
 gem 'simple_form'
 gem 'active_link_to'
 gem 'dotenv-rails'
+gem 'phrasing'
 
 # CSS
 gem 'sass-rails', '~> 5.0'

@@ -79,7 +79,11 @@ GEM
       sass (>= 3.2)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    haml (4.0.7)
+      tilt
     i18n (0.7.0)
+    jquery-cookie-rails (1.3.1.1)
+      railties (>= 3.2.0, < 5.0)
     jquery-rails (4.1.0)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
@@ -111,6 +115,13 @@ GEM
     open4 (1.3.4)
     orm_adapter (0.5.0)
     pg (0.18.4)
+    phrasing (4.0.0rc11)
+      haml
+      jquery-cookie-rails
+      jquery-rails
+      rails (>= 3.2.0)
+      railties (>= 3.2)
+      sass
     pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -223,6 +234,7 @@ DEPENDENCIES
   mina
   mina-dotenv
   pg (~> 0.15)
+  phrasing
   pry-rails
   puma
   rails (= 4.2.5)
