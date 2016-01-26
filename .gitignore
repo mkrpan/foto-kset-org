@@ -11,3 +11,7 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Dotenv
+.env
+.env.development
