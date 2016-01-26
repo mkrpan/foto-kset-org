@@ -10,6 +10,7 @@ gem 'simple_form'
 gem 'active_link_to'
 gem 'dotenv-rails'
 gem 'phrasing'
+gem 'therubyracer'
 
 # CSS
 gem 'sass-rails', '~> 5.0'
