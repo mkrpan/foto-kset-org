@@ -4,6 +4,10 @@
 @import 'lightbox';
 @import url(https://fonts.googleapis.com/css?family=Oxygen&subset=latin,latin-ext);
 
+body, html {
+  height: 100%;
+}
+
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
   width: 100%;
 }
