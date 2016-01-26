@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     root to: 'seasons#index'
     resources :applications
     resources :seasons
+    resources :users
   end
 end

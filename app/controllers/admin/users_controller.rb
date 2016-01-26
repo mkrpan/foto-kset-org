@@ -49,7 +49,7 @@ module Admin
     end
 
     def build_user
-      @user ||= user.new
+      @user ||= User.new
       @user.attributes = user_params
     end
 

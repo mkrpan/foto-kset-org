@@ -37,7 +37,7 @@ nav.navbar.navbar-default
           = icon('calendar')
           | Seasons
 
-        /* = active_link_to users_path, active: :inclusive, wrap_tag: :li do*/
-        /*   = icon('users')*/
-        /*   | Users*/
+        = active_link_to [:admin, :users], active: :inclusive, wrap_tag: :li do
+          = icon('users')
+          | Users
 

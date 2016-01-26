@@ -20,8 +20,8 @@
         | Back
 
     .col-xs-12
-      - if season.created_at.present?
-        p.help-block Created at: #{season.created_at.strftime('%d.%m.%Y %H:%M')}
+      - if user.created_at.present?
+        p.help-block Created at: #{user.created_at.strftime('%d.%m.%Y %H:%M')}
 
-      - if season.updated_at.present?
-        p.help-block Updated at: #{season.updated_at.strftime('%d.%m.%Y %H:%M')}
+      - if user.updated_at.present?
+        p.help-block Updated at: #{user.updated_at.strftime('%d.%m.%Y %H:%M')}
