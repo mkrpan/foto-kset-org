@@ -5,16 +5,16 @@ default: &default
 
 development:
   <<: *default
-  url: <%= ENV['DB_URL'] %>
+  host: <%= ENV['DB_URL'] %>
   database: <%= ENV['DB_NAME'] %>
 test:
   <<: *default
-  url: <%= ENV['DB_URL'] %>
+  host: <%= ENV['DB_URL'] %>
   database: <%= ENV['DB_NAME'] %>
 
 production:
   <<: *default
-  url: <%= ENV['DB_URL'] %>
+  host: <%= ENV['DB_URL'] %>
   database: <%= ENV['DB_NAME'] %>
   username: <%= ENV['DB_USER'] %>
   password: <%= ENV['DB_PASS'] %>
