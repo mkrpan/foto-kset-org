@@ -1,0 +1,27 @@
+= simple_form_for [:admin, user] do |f|
+  .row
+    .col-xs-12
+      = f.input :email
+    .col-md-6
+      = f.input :password
+    .col-md-6
+      = f.input :password_confirmation
+
+  .row
+    .col-xs-12
+      hr
+
+      button.btn.btn-success.btn-lg
+        = icon('check')
+        | Save
+
+      = link_to [:admin, :seasons], class: 'btn btn-primary btn-lg'
+        = icon('chevron-left')
+        | Back
+
+    .col-xs-12
+      - if season.created_at.present?
+        p.help-block Created at: #{season.created_at.strftime('%d.%m.%Y %H:%M')}
+
+      - if season.updated_at.present?
+        p.help-block Updated at: #{season.updated_at.strftime('%d.%m.%Y %H:%M')}

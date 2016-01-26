@@ -1,0 +1,14 @@
+.container
+  .col-xs-12
+    table.table.table-striped
+      thead
+        tr
+          th Email
+          th
+            .pull-right
+              = link_to [:new, :admin, :user], class: 'btn btn-xs btn-default'
+                = icon(:plus)
+                | New
+      tbody
+        - @users.each do |user|
+          = render 'user', user: user

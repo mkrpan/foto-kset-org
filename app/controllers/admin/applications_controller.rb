@@ -30,7 +30,7 @@ module Admin
     def destroy
       load_application
       @application.destroy
-      redirect_to [:admin, :index]
+      redirect_to [:admin, :applications]
     end
 
     private
