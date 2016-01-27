@@ -79,7 +79,7 @@ $(document).ready(function() {
   });
 
   $('#SubmitInlineTecaj').click(function() {
-    $('#PrijavaTecaj .workshop-form-container form').submit();
+    $('#PrijavaTecaj .course-form-container form').submit();
   });
 
   $('body').scrollspy({ target: '.navbar', offset: 400 });
