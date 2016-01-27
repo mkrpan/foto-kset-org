@@ -4,6 +4,9 @@ html
     = stylesheet_link_tag    'admin', media: 'all'
     = javascript_include_tag 'admin'
     = csrf_meta_tags
+    link rel  = "shortcut icon" type="image/png" href="#{image_path('favicon.png')}"
+    meta charset = "utf-8"
+    meta name = "viewport" content = "width = device-width, initial-scale = 1"
   body
     = render 'shared/admin_navigation'
     = yield

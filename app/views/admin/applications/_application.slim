@@ -2,7 +2,7 @@ tr
   th = application.id
   th = application.first_name
   th = application.last_name
-  th = application.season.title
+  th = application.season.try(:title)
   th
     .pull-right
       = link_to [:admin, application], class: 'btn btn-xs btn-primary'
