@@ -8,6 +8,9 @@
       | Email: #{@application.email}
     .col-md-6
       | Mobile phone: #{@application.mobile_phone}
+    - if @application.interest_string
+      .col-md-6
+        | Interest: #{@application.interest_string}
     .col-md-6
       | Season: #{@application.season.title}
 

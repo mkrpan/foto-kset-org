@@ -8,7 +8,8 @@
       = f.input :email
     .col-md-6
       = f.input :mobile_phone
-  .row
+    .col-md-6
+      = f.input :interest, collection: Application.interests_collection.to_a, label_method: :last, value_method: :first, as: :radio_buttons
     .col-md-6
       = f.association :season, collection: Season.all
   .row

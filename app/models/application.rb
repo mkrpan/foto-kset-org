@@ -32,4 +32,8 @@ class Application < ActiveRecord::Base
       4 => 'Ne znam još :('
     }
   end
+
+  def interest_string
+    self.class.interests_collection[interest]
+  end
 end

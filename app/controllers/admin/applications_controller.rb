@@ -38,7 +38,7 @@ module Admin
     def application_params
       return {} unless params[:application]
       params.require(:application).permit(
-        :first_name, :last_name, :email, :mobile_phone, :season_id
+        :first_name, :last_name, :email, :mobile_phone, :season_id, :interest
       )
     end
 
