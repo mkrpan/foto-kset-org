@@ -13,6 +13,6 @@
                 = link_to [:new, :admin, :application], class: 'btn btn-xs btn-default'
                   = icon(:plus)
                   | New
-      tbody
-        - @applications.each do |application|
-          = render 'application', application: application
+        tbody
+          - @applications.each do |application|
+            = render 'application', application: application
