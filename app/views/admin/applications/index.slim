@@ -1,17 +1,18 @@
 .container
   .col-xs-12
-    table.table.table-striped
-      thead
-        tr
-          th ID
-          th First name
-          th Last name
-          th Season
-          th
-            .pull-right
-              = link_to [:new, :admin, :application], class: 'btn btn-xs btn-default'
-                = icon(:plus)
-                | New
+    .table-responsive
+      table.table.table-striped
+        thead
+          tr
+            th ID
+            th First name
+            th Last name
+            th Season
+            th
+              .pull-right
+                = link_to [:new, :admin, :application], class: 'btn btn-xs btn-default'
+                  = icon(:plus)
+                  | New
       tbody
         - @applications.each do |application|
           = render 'application', application: application
