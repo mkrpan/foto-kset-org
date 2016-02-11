@@ -1,534 +1,544 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navbar">
-          <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
-        </button>
-    </div>
-    <div class="collapse navbar-collapse" id="Navbar">
-      <ul class="nav navbar-nav">
-        <li><a class="Shortcut" href="#OFotosekciji"><%= phrase('about-title') %></a></li>
-        <li><a class="Shortcut" href="#OTecaju"><%= phrase('course-title') %></a></li>
-        <li><a class="Shortcut" href="#ORadionici"><%= phrase('workshop-title') %></a></li>
-        <li><a class="Shortcut" href="#MonografijaTekst"><%= phrase('monography-title') %></a></li>
-        <li><a class="Shortcut" href="#TamnaKomoraTekst"><%= phrase('darkroom-title') %></a></li>
-        <li><a class="Shortcut" href="#Fotoaktivnosti"><%= phrase('activities-title') %></a></li>
-        <li><a class="Shortcut" href="#Kontakt"><%= phrase('contact-title') %></a></li>
-        <li><a class="Shortcut" href="#PostaniClan"><%= phrase('members-title') %></a></li>
-      </ul>
-  </div>
-  </div>
-</nav>
-
-
-<div class = "container-fluid">
-  <div class = "row">
-    <div class = "col-xs-12">
-      <h1 id = "CoverTitle">
-        <strong>
-          <%= phrase('main-title') %>
-        </strong>
-      </h1>
-    </div>
-  </div>
-</div>
-
-<div class = "container onepage">
-  <div class = "row">
-    <div class = "col-xs-12 col-md-6">
-      <div class = "ColumnContent" id="OFotosekciji">
-
-        <h2> <%= phrase('about-title') %> </h2>
-        <%= phrase('about-content') %>
-
-      </div>
-    </div>
-
-    <div class = "col-xs-12 col-md-6">
-      <table class = "GalleryLSS">
-        <thead>
-          <tr>
-            <th colspan = "2">
-              <%= link_to image_path('dino1.jpg'), data: { lightbox: 'onama' } do %>
-                <%= image_tag 'dino1.jpg', class: 'img-responsive img-fadein'%>
-              <% end %>
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>
-              <%= link_to image_path('matej1.jpg'), data: { lightbox: 'onama' } do %>
-                <%= image_tag 'matej1.jpg', class: 'img-responsive img-fadein'%>
-              <% end %>
-            </td>
-
-            <td>
-              <%= link_to image_path('dino2.jpg'), data: { lightbox: 'onama' } do %>
-                <%= image_tag 'dino2.jpg', class: 'img-responsive img-fadein'%>
-              <% end %>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
-
-<div id="TecajContainer">
-  <div class = "container onepage">
-    <div class = "row">
-
-      <% if @course.present? %>
-        <button type="button" class="btn btn-primary btn-lg hidden-xs hidden-sm" data-toggle="modal" data-target="#TecajModal" id ="TecajModalButton">Prijavi se <br>na tečaj </button>
-      <% end %>
-
-      <div class = "col-xs-12 col-md-6">
-
-        <table class = "GalleryLSS">
-          <thead>
-            <tr>
-              <th colspan = "2">
-                <%= link_to image_path('tecaj_screenshot.png'), data: { lightbox: 'tecaj' } do %>
-                  <%= image_tag 'tecaj_screenshot.png', class: 'img-responsive img-fadein'%>
-                <% end %>
-              </th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>
-                <%= link_to image_path('tecaj_zajednicko1.jpg'), data: { lightbox: 'tecaj' } do %>
-                  <%= image_tag 'tecaj_zajednicko1.jpg', class: 'img-responsive img-fadein'%>
-                <% end %>
-              </td>
-
-              <td>
-                <%= link_to image_path('tecaj_zajednicko2.jpg'), data: { lightbox: 'tecaj' } do %>
-                  <%= image_tag 'tecaj_zajednicko2.jpg', class: 'img-responsive img-fadein'%>
-                <% end %>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class = "col-xs-12 col-md-6">
-        <div class = "ColumnContent" id="OTecaju">
-
-          <h2> <%= phrase('course-title') %> </h2>
-          <%= phrase('course-content') %>
-
-        </div>
+<div class="js">
+  <div id="preloader">
+    <div style="display:table; width:100%; height:100%;">
+      <div id="camera-retro">
+        <i class="fa fa-camera-retro fa-spin"></i>
       </div>
     </div>
   </div>
-</div>
 
-<div id="RadionicaContainer">
-  <div class = "container onepage">
-    <div class = "row">
-      <% if @workshop.present? %>
-        <button type="button" class="btn btn-primary btn-lg hidden-xs hidden-sm" data-toggle="modal" data-target="#RadionicaModal" id ="RadionicaModalButton">Prijavi se <br>na <br>jednodnevnu <br>fotoradionicu </button>
-      <% end %>
-      <div class = "col-xs-12 col-md-6">
-        <div class = "ColumnContent" id="ORadionici">
-
-          <h2> <%= phrase('workshop-title') %> </h2>
-          <%= phrase('workshop-content') %>
-
-        </div>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navbar">
+            <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+          </button>
       </div>
-
-      <div class = "col-xs-12 col-md-6">
-        <table class = "GalleryLSS">
-          <thead>
-            <tr>
-              <th colspan = "2">
-                <%= link_to image_path('radionica_prakticni3.jpg'), data: { lightbox: 'radionica' } do %>
-                  <%= image_tag 'radionica_prakticni3.jpg', class: 'img-responsive img-fadein'%>
-                <% end %>
-              </th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>
-                <%= link_to image_path('radionica_prakticni1.jpg'), data: { lightbox: 'radionica' } do %>
-                  <%= image_tag 'radionica_prakticni1.jpg', class: 'img-responsive img-fadein'%>
-                <% end %>
-              </td>
-
-              <td>
-                <%= link_to image_path('radionica_prakticni2.jpg'), data: { lightbox: 'radionica' } do %>
-                  <%= image_tag 'radionica_prakticni2.jpg', class: 'img-responsive img-fadein'%>
-                <% end %>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <div class="collapse navbar-collapse" id="Navbar">
+        <ul class="nav navbar-nav">
+          <li><a class="Shortcut" href="#OFotosekciji"><%= phrase('about-title') %></a></li>
+          <li><a class="Shortcut" href="#OTecaju"><%= phrase('course-title') %></a></li>
+          <li><a class="Shortcut" href="#ORadionici"><%= phrase('workshop-title') %></a></li>
+          <li><a class="Shortcut" href="#MonografijaTekst"><%= phrase('monography-title') %></a></li>
+          <li><a class="Shortcut" href="#TamnaKomoraTekst"><%= phrase('darkroom-title') %></a></li>
+          <li><a class="Shortcut" href="#Fotoaktivnosti"><%= phrase('activities-title') %></a></li>
+          <li><a class="Shortcut" href="#Kontakt"><%= phrase('contact-title') %></a></li>
+          <li><a class="Shortcut" href="#PostaniClan"><%= phrase('members-title') %></a></li>
+        </ul>
     </div>
-  </div>
-</div>
-
-<div id = "MonografijaOuter">
-  <div class = "container onepage-padding">
-    <div class = "row">
-      <div class = "col-xs-12 col-md-6">
-        <div id = "MonografijaTekst">
-
-          <h2> <%= phrase('monography-title') %> </h2>
-          <%= phrase('conography-content') %>
-
-        </div>
-      </div>
-
-      <div class = "col-xs-12 col-md-6">
-        <div id = "MonografijaSlika">
-          <%= image_tag 'kset_mono.png', class: 'img-responsive'%>
-        </div>
-      </div>
     </div>
-  </div>
-</div>
+  </nav>
 
-<div id = "TamnaKomoraOuter">
-  <div class = "container onepage-padding">
+
+  <div class = "container-fluid">
     <div class = "row">
       <div class = "col-xs-12">
-        <div id = "TamnaKomoraTekst">
+        <h1 id = "CoverTitle">
+          <strong>
+            <%= phrase('main-title') %>
+          </strong>
+        </h1>
+      </div>
+    </div>
+  </div>
 
-          <h2> <%= phrase('darkroom-title') %> </h2>
-          <%= phrase('darkroom-content') %>
+  <div class = "container onepage">
+    <div class = "row">
+      <div class = "col-xs-12 col-md-6">
+        <div class = "ColumnContent" id="OFotosekciji">
 
+          <h2> <%= phrase('about-title') %> </h2>
+          <%= phrase('about-content') %>
+
+        </div>
+      </div>
+
+      <div class = "col-xs-12 col-md-6">
+        <table class = "GalleryLSS">
+          <thead>
+            <tr>
+              <th colspan = "2">
+                <%= link_to image_path('dino1.jpg'), data: { lightbox: 'onama' } do %>
+                  <%= image_tag 'dino1.jpg', class: 'img-responsive img-fadein'%>
+                <% end %>
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>
+                <%= link_to image_path('matej1.jpg'), data: { lightbox: 'onama' } do %>
+                  <%= image_tag 'matej1.jpg', class: 'img-responsive img-fadein'%>
+                <% end %>
+              </td>
+
+              <td>
+                <%= link_to image_path('dino2.jpg'), data: { lightbox: 'onama' } do %>
+                  <%= image_tag 'dino2.jpg', class: 'img-responsive img-fadein'%>
+                <% end %>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div id="TecajContainer">
+    <div class = "container onepage">
+      <div class = "row">
+
+        <% if @course.present? %>
+          <button type="button" class="btn btn-primary btn-lg hidden-xs hidden-sm" data-toggle="modal" data-target="#TecajModal" id ="TecajModalButton">Prijavi se <br>na tečaj </button>
+        <% end %>
+
+        <div class = "col-xs-12 col-md-6">
+
+          <table class = "GalleryLSS">
+            <thead>
+              <tr>
+                <th colspan = "2">
+                  <%= link_to image_path('tecaj_screenshot.png'), data: { lightbox: 'tecaj' } do %>
+                    <%= image_tag 'tecaj_screenshot.png', class: 'img-responsive img-fadein'%>
+                  <% end %>
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>
+                  <%= link_to image_path('tecaj_zajednicko1.jpg'), data: { lightbox: 'tecaj' } do %>
+                    <%= image_tag 'tecaj_zajednicko1.jpg', class: 'img-responsive img-fadein'%>
+                  <% end %>
+                </td>
+
+                <td>
+                  <%= link_to image_path('tecaj_zajednicko2.jpg'), data: { lightbox: 'tecaj' } do %>
+                    <%= image_tag 'tecaj_zajednicko2.jpg', class: 'img-responsive img-fadein'%>
+                  <% end %>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class = "col-xs-12 col-md-6">
+          <div class = "ColumnContent" id="OTecaju">
+
+            <h2> <%= phrase('course-title') %> </h2>
+            <%= phrase('course-content') %>
+
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12" id="Fotoaktivnosti">
-            <h2> <%= phrase('activities-title') %> </h2>
+  <div id="RadionicaContainer">
+    <div class = "container onepage">
+      <div class = "row">
+        <% if @workshop.present? %>
+          <button type="button" class="btn btn-primary btn-lg hidden-xs hidden-sm" data-toggle="modal" data-target="#RadionicaModal" id ="RadionicaModalButton">Prijavi se <br>na <br>jednodnevnu <br>fotoradionicu </button>
+        <% end %>
+        <div class = "col-xs-12 col-md-6">
+          <div class = "ColumnContent" id="ORadionici">
+
+            <h2> <%= phrase('workshop-title') %> </h2>
+            <%= phrase('workshop-content') %>
+
+          </div>
+        </div>
+
+        <div class = "col-xs-12 col-md-6">
+          <table class = "GalleryLSS">
+            <thead>
+              <tr>
+                <th colspan = "2">
+                  <%= link_to image_path('radionica_prakticni3.jpg'), data: { lightbox: 'radionica' } do %>
+                    <%= image_tag 'radionica_prakticni3.jpg', class: 'img-responsive img-fadein'%>
+                  <% end %>
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>
+                  <%= link_to image_path('radionica_prakticni1.jpg'), data: { lightbox: 'radionica' } do %>
+                    <%= image_tag 'radionica_prakticni1.jpg', class: 'img-responsive img-fadein'%>
+                  <% end %>
+                </td>
+
+                <td>
+                  <%= link_to image_path('radionica_prakticni2.jpg'), data: { lightbox: 'radionica' } do %>
+                    <%= image_tag 'radionica_prakticni2.jpg', class: 'img-responsive img-fadein'%>
+                  <% end %>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id = "MonografijaOuter">
+    <div class = "container onepage-padding">
+      <div class = "row">
+        <div class = "col-xs-12 col-md-6">
+          <div id = "MonografijaTekst">
+
+            <h2> <%= phrase('monography-title') %> </h2>
+            <%= phrase('conography-content') %>
+
+          </div>
+        </div>
+
+        <div class = "col-xs-12 col-md-6">
+          <div id = "MonografijaSlika">
+            <%= image_tag 'kset_mono.png', class: 'img-responsive'%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id = "TamnaKomoraOuter">
+    <div class = "container onepage-padding">
+      <div class = "row">
+        <div class = "col-xs-12">
+          <div id = "TamnaKomoraTekst">
+
+            <h2> <%= phrase('darkroom-title') %> </h2>
+            <%= phrase('darkroom-content') %>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+      <div class="row">
+          <div class="col-xs-12" id="Fotoaktivnosti">
+              <h2> <%= phrase('activities-title') %> </h2>
+              <p style="border-bottom: 1px solid #d0d0d0;">
+                <%= phrase('activities-section-1-content') %>
+              </p>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-xs-12 col-sm-6 ColumnContent">
             <p style="border-bottom: 1px solid #d0d0d0;">
-              <%= phrase('activities-section-1-content') %>
+              <%= phrase('activities-section-2-content') %>
             </p>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 ColumnContent">
+            <p style="border-bottom: 1px solid #d0d0d0;">
+              <%= phrase('activities-section-3-content') %>
+            </p>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-xs-12 col-sm-6 ColumnContent">
+            <p style="border-bottom: 1px solid #d0d0d0;">
+              <%= phrase('activities-section-4-content') %>
+            </p>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 ColumnContent">
+            <p style="border-bottom: 1px solid #d0d0d0;">
+              <%= phrase('activities-section-5-content') %>
+            </p>
+          </div>
+      </div>
+  </div>
+
+  <div class="container">
+      <div class="row">
+          <div class="col-xs-12">
+              <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#GalleryCarousel"> Galerija slika </button>
+          </div>
+      </div>
+  </div>
+
+  <div class = "container">
+    <div class = "row" >
+      <div class = "col-xs-12">
+        <div id = "GalleryCarousel" class = "carousel slide collapse" data-ride = "carousel">
+          <ol class="carousel-indicators">
+              <li data-target="#GalleryCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#GalleryCarousel" data-slide-to="1"></li>
+              <li data-target="#GalleryCarousel" data-slide-to="2"></li>
+              <li data-target="#GalleryCarousel" data-slide-to="3"></li>
+              <li data-target="#GalleryCarousel" data-slide-to="4"></li>
+              <li data-target="#GalleryCarousel" data-slide-to="5"></li>
+              <li data-target="#GalleryCarousel" data-slide-to="6"></li>
+              <li data-target="#GalleryCarousel" data-slide-to="7"></li>
+              <li data-target="#GalleryCarousel" data-slide-to="8"></li>
+            </ol>
+            <div class = "carousel-inner" role = "listbox">
+              <div class = "item active">
+                <%= image_tag 'druzenja/1.jpg'%>
+                <div class = "carousel-caption">
+                  <h3> 50 godina Fotosekcije </h3>
+                  <p> Stari i mladi Fotosekcije na 50. rođendanu </p>
+                </div>
+              </div>
+
+              <div class = "item">
+                <%= image_tag 'druzenja/2.JPG'%>
+                <div class = "carousel-caption">
+                  <h3> Zagrebački rally </h3>
+                  <p> Članovi fotosekcije na Zagrebačkom rally u organizaciji P.I.J.A.N.D.U.R.E.-a </p>
+                </div>
+              </div>
+
+              <div class = "item">
+                <%= image_tag 'druzenja/3.jpg'%>
+                <div class = "carousel-caption">
+                  <h3> Silly Petra </h3>
+                  <p> Jedan od brojnih trenutaka uhvaćen u našim druženjima </p>
+                </div>
+              </div>
+
+              <div class = "item">
+                <%= image_tag 'druzenja/4.jpg'%>
+                <div class = "carousel-caption">
+                  <h3> FotoCaffe </h3>
+                  <p> Zajednička fotka fotodruženja na KSET Caffe-u </p>
+                </div>
+              </div>
+
+              <div class = "item">
+                <%= image_tag 'druzenja/5.jpg'%>
+                <div class = "carousel-caption">
+                  <h3> Zadnji sastanak </h3>
+                  <p> Zadnji sastanak 2015. godine prije promjene vodstva </p>
+                </div>
+              </div>
+
+              <div class = "item">
+                <%= image_tag 'druzenja/6.jpg'%>
+                <div class = "carousel-caption">
+                  <h3> Grumpy Santa </h3>
+                  <p> Članovi fotosekcije s Djedicom Koji je Mrtav Iznutra i Mrzi Ljude prilikom Božićnog fotkanja i izrađivanja razglednica u KSET-u </p>
+                </div>
+              </div>
+
+              <div class = "item">
+                <%= image_tag 'druzenja/7.jpg'%>
+                <div class = "carousel-caption">
+                  <h3> Selfie time! </h3>
+                  <p> Obavezni selfie na Zagrebačkom rally-ju </p>
+                </div>
+              </div>
+
+              <div class = "item">
+                <%= image_tag 'druzenja/8.jpg'%>
+                <div class = "carousel-caption">
+                  <h3> Elektroplaninarski rally </h3>
+                  <p> Fototim na Elektroplaninarskom rallyju u organizaciji P.I.J.A.N.D.U.R.E.-a </p>
+                </div>
+              </div>
+
+              <div class = "item">
+                <%= image_tag 'druzenja/9.jpg'%>
+                <div class = "carousel-caption">
+                  <h3> Clone stamp! </h3>
+                  <p> Kad nas nema dovoljno za druženje stvorit ćemo još ekipe  </p>
+                </div>
+              </div>
+            </div>
+
+            <a class="left carousel-control" href="#GalleryCarousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#GalleryCarousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
         </div>
+      </div>
     </div>
 
-    <div class="row">
-        <div class="col-xs-12 col-sm-6 ColumnContent">
-          <p style="border-bottom: 1px solid #d0d0d0;">
-            <%= phrase('activities-section-2-content') %>
-          </p>
-        </div>
+  <div id="contact-info-wrapper">
 
-        <div class="col-xs-12 col-sm-6 ColumnContent">
-          <p style="border-bottom: 1px solid #d0d0d0;">
-            <%= phrase('activities-section-3-content') %>
-          </p>
-        </div>
-    </div>
+      <div class="container onepage-padding">
+          <div class="row">
+              <div class="col-xs-12" id="Kontakt">
 
-    <div class="row">
-        <div class="col-xs-12 col-sm-6 ColumnContent">
-          <p style="border-bottom: 1px solid #d0d0d0;">
-            <%= phrase('activities-section-4-content') %>
-          </p>
-        </div>
+                  <h2> <%= phrase('contact-title') %> </h2>
+                  <%= phrase('contact-content') %>
 
-        <div class="col-xs-12 col-sm-6 ColumnContent">
-          <p style="border-bottom: 1px solid #d0d0d0;">
-            <%= phrase('activities-section-5-content') %>
-          </p>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12">
-            <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#GalleryCarousel"> Galerija slika </button>
-        </div>
-    </div>
-</div>
-
-<div class = "container">
-  <div class = "row" >
-    <div class = "col-xs-12">
-      <div id = "GalleryCarousel" class = "carousel slide collapse" data-ride = "carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#GalleryCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#GalleryCarousel" data-slide-to="1"></li>
-            <li data-target="#GalleryCarousel" data-slide-to="2"></li>
-            <li data-target="#GalleryCarousel" data-slide-to="3"></li>
-            <li data-target="#GalleryCarousel" data-slide-to="4"></li>
-            <li data-target="#GalleryCarousel" data-slide-to="5"></li>
-            <li data-target="#GalleryCarousel" data-slide-to="6"></li>
-            <li data-target="#GalleryCarousel" data-slide-to="7"></li>
-            <li data-target="#GalleryCarousel" data-slide-to="8"></li>
-          </ol>
-          <div class = "carousel-inner" role = "listbox">
-            <div class = "item active">
-              <%= image_tag 'druzenja/1.jpg'%>
-              <div class = "carousel-caption">
-                <h3> 50 godina Fotosekcije </h3>
-                <p> Stari i mladi Fotosekcije na 50. rođendanu </p>
               </div>
-            </div>
+          </div>
 
-            <div class = "item">
-              <%= image_tag 'druzenja/2.JPG'%>
-              <div class = "carousel-caption">
-                <h3> Zagrebački rally </h3>
-                <p> Članovi fotosekcije na Zagrebačkom rally u organizaciji P.I.J.A.N.D.U.R.E.-a </p>
+      </div>
+
+  </div>
+
+  <div class="clearfix" />
+
+  <div id="become-a-photowan">
+
+      <div class="container onepage-padding">
+          <div class="row">
+              <div class="col-xs-12" id="PostaniClan">
+                  <h2> <%= phrase('members-title') %> </h2>
+                  <%= phrase('members-content') %>
               </div>
-            </div>
+          </div>
+      </div>
 
-            <div class = "item">
-              <%= image_tag 'druzenja/3.jpg'%>
-              <div class = "carousel-caption">
-                <h3> Silly Petra </h3>
-                <p> Jedan od brojnih trenutaka uhvaćen u našim druženjima </p>
+  </div>
+
+  <div id = "PrijaveOuter" class="hidden-md hidden-lg">
+    <div class = "container">
+      <div class = "row">
+        <% if @course.present? %>
+          <div class = "col-xs-12" id = "PrijavaTecajContainer">
+            <h3 style = "text-align: center;"> Prijavi se na tečaj fotografije! </h3>
+            <div style = "text-align:center; margin-bottom: 5%;"><button type = "button" class = "btn btn-default btn-lg" data-toggle = "collapse" data-target = "#PrijavaTecaj"> Klikni ovdje! </button> </div>
+            <div id = "PrijavaTecaj" class = "collapse">
+              <div class='course-form-container'>
+                <%= render 'course_form', application: Application.new, season: @course %>
               </div>
+              <div style = "text-align:center; margin-bottom: 5%;"><button type = "button" class = "btn btn-default btn-lg" id="SubmitInlineTecaj"> PRIJAVI ME NA FOTOTEČAJ! </button> </div>
             </div>
+          </div>
+        <% end %>
 
-            <div class = "item">
-              <%= image_tag 'druzenja/4.jpg'%>
-              <div class = "carousel-caption">
-                <h3> FotoCaffe </h3>
-                <p> Zajednička fotka fotodruženja na KSET Caffe-u </p>
+        <% if @workshop.present? %>
+          <div class = "col-xs-12" id = "PrijavaRadionicaContainer">
+            <h3 style = "text-align: center;"> Prijavi se na jednodnevnu radionicu fotografije! </h3>
+            <div style  = "text-align:center; margin-bottom: 5%;"><button type = "button" class = "btn btn-primary btn-lg" data-toggle = "collapse" data-target = "#PrijavaRadionica"> Klikni ovdje! </button> </div>
+            <div id = "PrijavaRadionica" class = "collapse">
+              <div class='workshop-form-container'>
+                <%= render 'workshop_form', application: Application.new, season: @workshop %>
               </div>
-            </div>
-
-            <div class = "item">
-              <%= image_tag 'druzenja/5.jpg'%>
-              <div class = "carousel-caption">
-                <h3> Zadnji sastanak </h3>
-                <p> Zadnji sastanak 2015. godine prije promjene vodstva </p>
-              </div>
-            </div>
-
-            <div class = "item">
-              <%= image_tag 'druzenja/6.jpg'%>
-              <div class = "carousel-caption">
-                <h3> Grumpy Santa </h3>
-                <p> Članovi fotosekcije s Djedicom Koji je Mrtav Iznutra i Mrzi Ljude prilikom Božićnog fotkanja i izrađivanja razglednica u KSET-u </p>
-              </div>
-            </div>
-
-            <div class = "item">
-              <%= image_tag 'druzenja/7.jpg'%>
-              <div class = "carousel-caption">
-                <h3> Selfie time! </h3>
-                <p> Obavezni selfie na Zagrebačkom rally-ju </p>
-              </div>
-            </div>
-
-            <div class = "item">
-              <%= image_tag 'druzenja/8.jpg'%>
-              <div class = "carousel-caption">
-                <h3> Elektroplaninarski rally </h3>
-                <p> Fototim na Elektroplaninarskom rallyju u organizaciji P.I.J.A.N.D.U.R.E.-a </p>
-              </div>
-            </div>
-
-            <div class = "item">
-              <%= image_tag 'druzenja/9.jpg'%>
-              <div class = "carousel-caption">
-                <h3> Clone stamp! </h3>
-                <p> Kad nas nema dovoljno za druženje stvorit ćemo još ekipe  </p>
+              <div style = "text-align:center; margin-bottom: 5%;">
+                <button type = "button" class = "btn btn-primary btn-lg" id="SubmitInlineRadionica"> PRIJAVI ME NA FOTORADIONICU! </button>
               </div>
             </div>
           </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-          <a class="left carousel-control" href="#GalleryCarousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
+  <div id = "FollowUsFooterWrapper">
+    <div class = "container" id = "FollowUsFooter">
+      <div class = "row">
+        <div class = "col-xs-12 col-sm-4" id = "lijevo">
+          <a href = "https://www.kset.org/" target ="_blank">
+            <%= image_tag 'kset_logo.jpg', class: 'img-responsive' %>
           </a>
-          <a class="right carousel-control" href="#GalleryCarousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
+        </div>
+        <div class = "col-xs-12 col-sm-4" id = "sredina">
+          <a href = "https://www.kset.org/club/multimedia/" target ="_blank">
+            <%= image_tag 'ivona_1.jpg', class: 'img-responsive' %>
+          </a>
+        </div>
+        <div class = "col-xs-12 col-sm-4" id = "desno">
+          <a href = "https://www.facebook.com/ksetfoto?fref=ts" target ="_blank">
+            <%= image_tag 'facebook_logo.jpg', class: 'img-responsive' %>
           </a>
         </div>
       </div>
     </div>
   </div>
 
-<div id="contact-info-wrapper">
-
-    <div class="container onepage-padding">
-        <div class="row">
-            <div class="col-xs-12" id="Kontakt">
-
-                <h2> <%= phrase('contact-title') %> </h2>
-                <%= phrase('contact-content') %>
-
-            </div>
-        </div>
-
-    </div>
-
-</div>
-
-<div class="clearfix" />
-
-<div id="become-a-photowan">
-
-    <div class="container onepage-padding">
-        <div class="row">
-            <div class="col-xs-12" id="PostaniClan">
-                <h2> <%= phrase('members-title') %> </h2>
-                <%= phrase('members-content') %>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-<div id = "PrijaveOuter" class="hidden-md hidden-lg">
-  <div class = "container">
+  <div class = "container-fluid" id="bottom">
     <div class = "row">
-      <% if @course.present? %>
-        <div class = "col-xs-12" id = "PrijavaTecajContainer">
-          <h3 style = "text-align: center;"> Prijavi se na tečaj fotografije! </h3>
-          <div style = "text-align:center; margin-bottom: 5%;"><button type = "button" class = "btn btn-default btn-lg" data-toggle = "collapse" data-target = "#PrijavaTecaj"> Klikni ovdje! </button> </div>
-          <div id = "PrijavaTecaj" class = "collapse">
+      <p style = "text-align: center; padding-top: 5px;"> <%= phrase('copyright') %> </p>
+    </div>
+  </div>
+
+  <a id = "BackToTop" href = "#"> <span class="glyphicon glyphicon-hand-up btn-default btn-lg" aria-hidden="true"></span> </a>
+
+  <% if @course.present? %>
+    <div class="modal fade" id="TecajModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Prijavi se na tečaj fotografije</h4>
+          </div>
+          <div class="modal-body">
             <div class='course-form-container'>
               <%= render 'course_form', application: Application.new, season: @course %>
             </div>
-            <div style = "text-align:center; margin-bottom: 5%;"><button type = "button" class = "btn btn-default btn-lg" id="SubmitInlineTecaj"> PRIJAVI ME NA FOTOTEČAJ! </button> </div>
+          </div>
+          <div class="modal-footer">
+            <button type = "button" class = "btn btn-default btn-lg" id="SubmitTecaj"> PRIJAVI ME NA FOTOTEČAJ! </button>
           </div>
         </div>
-      <% end %>
+      </div>
+    </div>
 
-      <% if @workshop.present? %>
-        <div class = "col-xs-12" id = "PrijavaRadionicaContainer">
-          <h3 style = "text-align: center;"> Prijavi se na jednodnevnu radionicu fotografije! </h3>
-          <div style  = "text-align:center; margin-bottom: 5%;"><button type = "button" class = "btn btn-primary btn-lg" data-toggle = "collapse" data-target = "#PrijavaRadionica"> Klikni ovdje! </button> </div>
-          <div id = "PrijavaRadionica" class = "collapse">
+    <div class="modal fade" id="TecajSuccess" tabindex="-1" role="dialog" aria-labelledby="RadionicaSuccessLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="modal-title" id="RadionicaSuccessLabel">WOO HOO!!</h4>
+            </div>
+          <div class="modal-body">
+              Hvala na prijavi! Vaša prijava je zaprimljena. Dobit ćete mail s dodatnim informacijama nekoliko dana prije održavanja uvodnog predavanja.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="close ClosePrijaveModal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">OK</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+
+
+
+
+  <% if @workshop.present? %>
+    <div class="modal fade" id="RadionicaModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Prijavi se na jednodnevnu radionicu fotografije</h4>
+          </div>
+          <div class="modal-body">
             <div class='workshop-form-container'>
               <%= render 'workshop_form', application: Application.new, season: @workshop %>
             </div>
-            <div style = "text-align:center; margin-bottom: 5%;">
-              <button type = "button" class = "btn btn-primary btn-lg" id="SubmitInlineRadionica"> PRIJAVI ME NA FOTORADIONICU! </button>
+          </div>
+          <div class="modal-footer">
+            <button type = "button" class = "btn btn-default btn-lg" id='SubmitRadionica'> PRIJAVI ME NA FOTORADIONICU! </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="RadionicaSuccess" tabindex="-1" role="dialog" aria-labelledby="RadionicaSuccessLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="modal-title" id="RadionicaSuccessLabel">WOO HOO!!</h4>
             </div>
+          <div class="modal-body">
+              Hvala na prijavi! Vaša prijava je zaprimljena. Dobit ćete mail s dodatnim informacijama nekoliko dana prije održavanja fotoradionice.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="close ClosePrijaveModal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">OK</span></button>
           </div>
         </div>
-      <% end %>
+      </div>
     </div>
-  </div>
+  <% end %>
 </div>
-
-<div id = "FollowUsFooterWrapper">
-  <div class = "container" id = "FollowUsFooter">
-    <div class = "row">
-      <div class = "col-xs-12 col-sm-4" id = "lijevo">
-        <a href = "https://www.kset.org/" target ="_blank">
-          <%= image_tag 'kset_logo.jpg', class: 'img-responsive' %>
-        </a>
-      </div>
-      <div class = "col-xs-12 col-sm-4" id = "sredina">
-        <a href = "https://www.kset.org/club/multimedia/" target ="_blank">
-          <%= image_tag 'ivona_1.jpg', class: 'img-responsive' %>
-        </a>
-      </div>
-      <div class = "col-xs-12 col-sm-4" id = "desno">
-        <a href = "https://www.facebook.com/ksetfoto?fref=ts" target ="_blank">
-          <%= image_tag 'facebook_logo.jpg', class: 'img-responsive' %>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class = "container-fluid" id="bottom">
-  <div class = "row">
-    <p style = "text-align: center; padding-top: 5px;"> <%= phrase('copyright') %> </p>
-  </div>
-</div>
-
-<a id = "BackToTop" href = "#"> <span class="glyphicon glyphicon-hand-up btn-default btn-lg" aria-hidden="true"></span> </a>
-
-<% if @course.present? %>
-  <div class="modal fade" id="TecajModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">Prijavi se na tečaj fotografije</h4>
-        </div>
-        <div class="modal-body">
-          <div class='course-form-container'>
-            <%= render 'course_form', application: Application.new, season: @course %>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type = "button" class = "btn btn-default btn-lg" id="SubmitTecaj"> PRIJAVI ME NA FOTOTEČAJ! </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="TecajSuccess" tabindex="-1" role="dialog" aria-labelledby="RadionicaSuccessLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-            <h4 class="modal-title" id="RadionicaSuccessLabel">WOO HOO!!</h4>
-          </div>
-        <div class="modal-body">
-            Hvala na prijavi! Vaša prijava je zaprimljena. Dobit ćete mail s dodatnim informacijama nekoliko dana prije održavanja uvodnog predavanja.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="close ClosePrijaveModal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">OK</span></button>
-        </div>
-      </div>
-    </div>
-  </div>
-<% end %>
-
-
-
-
-
-<% if @workshop.present? %>
-  <div class="modal fade" id="RadionicaModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">Prijavi se na jednodnevnu radionicu fotografije</h4>
-        </div>
-        <div class="modal-body">
-          <div class='workshop-form-container'>
-            <%= render 'workshop_form', application: Application.new, season: @workshop %>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type = "button" class = "btn btn-default btn-lg" id='SubmitRadionica'> PRIJAVI ME NA FOTORADIONICU! </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="RadionicaSuccess" tabindex="-1" role="dialog" aria-labelledby="RadionicaSuccessLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-            <h4 class="modal-title" id="RadionicaSuccessLabel">WOO HOO!!</h4>
-          </div>
-        <div class="modal-body">
-            Hvala na prijavi! Vaša prijava je zaprimljena. Dobit ćete mail s dodatnim informacijama nekoliko dana prije održavanja fotoradionice.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="close ClosePrijaveModal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">OK</span></button>
-        </div>
-      </div>
-    </div>
-  </div>
-<% end %>
