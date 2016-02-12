@@ -42,65 +42,25 @@
     </div>
   </div>
 
-  <div class = "container onepage">
-    <div class = "row">
-      <div class = "col-xs-12 col-md-6">
-        <div class = "ColumnContent" id="OFotosekciji">
-
-          <h2> <%= phrase('about-title') %> </h2>
-          <%= phrase('about-content') %>
-
-        </div>
-      </div>
-
-      <div class = "col-xs-12 col-md-6">
-        <table class = "GalleryLSS">
-          <thead>
-            <tr>
-              <th colspan = "2">
-                <%= link_to image_path('dino1.jpg'), data: { lightbox: 'onama' } do %>
-                  <%= image_tag 'dino1.jpg', class: 'img-responsive img-fadein'%>
-                <% end %>
-              </th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>
-                <%= link_to image_path('matej1.jpg'), data: { lightbox: 'onama' } do %>
-                  <%= image_tag 'matej1.jpg', class: 'img-responsive img-fadein'%>
-                <% end %>
-              </td>
-
-              <td>
-                <%= link_to image_path('dino2.jpg'), data: { lightbox: 'onama' } do %>
-                  <%= image_tag 'dino2.jpg', class: 'img-responsive img-fadein'%>
-                <% end %>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <div id="TecajContainer">
-    <div class = "container onepage">
+  <div class = "container">
+    <div class = "onepage-padding">
       <div class = "row">
+        <div class = "col-xs-12 col-md-6">
+          <div class = "ColumnContent" id="OFotosekciji">
 
-        <% if @course.present? %>
-          <button type="button" class="btn btn-primary btn-lg hidden-xs hidden-sm" data-toggle="modal" data-target="#TecajModal" id ="TecajModalButton">Prijavi se <br>na tečaj </button>
-        <% end %>
+            <h2> <%= phrase('about-title') %> </h2>
+            <%= phrase('about-content') %>
+
+          </div>
+        </div>
 
         <div class = "col-xs-12 col-md-6">
-
           <table class = "GalleryLSS">
             <thead>
               <tr>
                 <th colspan = "2">
-                  <%= link_to image_path('tecaj_screenshot.png'), data: { lightbox: 'tecaj' } do %>
-                    <%= image_tag 'tecaj_screenshot.png', class: 'img-responsive img-fadein'%>
+                  <%= link_to image_path('dino1.jpg'), data: { lightbox: 'onama' } do %>
+                    <%= image_tag 'dino1.jpg', class: 'img-responsive img-fadein'%>
                   <% end %>
                 </th>
               </tr>
@@ -109,27 +69,71 @@
             <tbody>
               <tr>
                 <td>
-                  <%= link_to image_path('tecaj_zajednicko1.jpg'), data: { lightbox: 'tecaj' } do %>
-                    <%= image_tag 'tecaj_zajednicko1.jpg', class: 'img-responsive img-fadein'%>
+                  <%= link_to image_path('matej1.jpg'), data: { lightbox: 'onama' } do %>
+                    <%= image_tag 'matej1.jpg', class: 'img-responsive img-fadein'%>
                   <% end %>
                 </td>
 
                 <td>
-                  <%= link_to image_path('tecaj_zajednicko2.jpg'), data: { lightbox: 'tecaj' } do %>
-                    <%= image_tag 'tecaj_zajednicko2.jpg', class: 'img-responsive img-fadein'%>
+                  <%= link_to image_path('dino2.jpg'), data: { lightbox: 'onama' } do %>
+                    <%= image_tag 'dino2.jpg', class: 'img-responsive img-fadein'%>
                   <% end %>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
+      </div>
+    </div>
+  </div>
 
-        <div class = "col-xs-12 col-md-6">
-          <div class = "ColumnContent" id="OTecaju">
+  <div id="TecajContainer">
+    <div class = "container">
+      <div class = "onepage-padding">
+        <div class = "row">
 
-            <h2> <%= phrase('course-title') %> </h2>
-            <%= phrase('course-content') %>
+          <% if @course.present? %>
+            <button type="button" class="btn btn-primary btn-lg hidden-xs hidden-sm" data-toggle="modal" data-target="#TecajModal" id ="TecajModalButton">Prijavi se <br>na tečaj </button>
+          <% end %>
 
+          <div class = "col-xs-12 col-md-6">
+
+            <table class = "GalleryLSS">
+              <thead>
+                <tr>
+                  <th colspan = "2">
+                    <%= link_to image_path('tecaj_screenshot.png'), data: { lightbox: 'tecaj' } do %>
+                      <%= image_tag 'tecaj_screenshot.png', class: 'img-responsive img-fadein'%>
+                    <% end %>
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>
+                    <%= link_to image_path('tecaj_zajednicko1.jpg'), data: { lightbox: 'tecaj' } do %>
+                      <%= image_tag 'tecaj_zajednicko1.jpg', class: 'img-responsive img-fadein'%>
+                    <% end %>
+                  </td>
+
+                  <td>
+                    <%= link_to image_path('tecaj_zajednicko2.jpg'), data: { lightbox: 'tecaj' } do %>
+                      <%= image_tag 'tecaj_zajednicko2.jpg', class: 'img-responsive img-fadein'%>
+                    <% end %>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class = "col-xs-12 col-md-6">
+            <div class = "ColumnContent" id="OTecaju">
+
+              <h2> <%= phrase('course-title') %> </h2>
+              <%= phrase('course-content') %>
+
+            </div>
           </div>
         </div>
       </div>
@@ -137,48 +141,50 @@
   </div>
 
   <div id="RadionicaContainer">
-    <div class = "container onepage">
-      <div class = "row">
-        <% if @workshop.present? %>
-          <button type="button" class="btn btn-primary btn-lg hidden-xs hidden-sm" data-toggle="modal" data-target="#RadionicaModal" id ="RadionicaModalButton">Prijavi se <br>na <br>jednodnevnu <br>fotoradionicu </button>
-        <% end %>
-        <div class = "col-xs-12 col-md-6">
-          <div class = "ColumnContent" id="ORadionici">
+    <div class = "container">
+      <div class = "onepage-padding">
+        <div class = "row">
+          <% if @workshop.present? %>
+            <button type="button" class="btn btn-primary btn-lg hidden-xs hidden-sm" data-toggle="modal" data-target="#RadionicaModal" id ="RadionicaModalButton">Prijavi se <br>na <br>jednodnevnu <br>fotoradionicu </button>
+          <% end %>
+          <div class = "col-xs-12 col-md-6">
+            <div class = "ColumnContent" id="ORadionici">
 
-            <h2> <%= phrase('workshop-title') %> </h2>
-            <%= phrase('workshop-content') %>
+              <h2> <%= phrase('workshop-title') %> </h2>
+              <%= phrase('workshop-content') %>
 
+            </div>
           </div>
-        </div>
 
-        <div class = "col-xs-12 col-md-6">
-          <table class = "GalleryLSS">
-            <thead>
-              <tr>
-                <th colspan = "2">
-                  <%= link_to image_path('radionica_prakticni3.jpg'), data: { lightbox: 'radionica' } do %>
-                    <%= image_tag 'radionica_prakticni3.jpg', class: 'img-responsive img-fadein'%>
-                  <% end %>
-                </th>
-              </tr>
-            </thead>
+          <div class = "col-xs-12 col-md-6">
+            <table class = "GalleryLSS">
+              <thead>
+                <tr>
+                  <th colspan = "2">
+                    <%= link_to image_path('radionica_prakticni3.jpg'), data: { lightbox: 'radionica' } do %>
+                      <%= image_tag 'radionica_prakticni3.jpg', class: 'img-responsive img-fadein'%>
+                    <% end %>
+                  </th>
+                </tr>
+              </thead>
 
-            <tbody>
-              <tr>
-                <td>
-                  <%= link_to image_path('radionica_prakticni1.jpg'), data: { lightbox: 'radionica' } do %>
-                    <%= image_tag 'radionica_prakticni1.jpg', class: 'img-responsive img-fadein'%>
-                  <% end %>
-                </td>
+              <tbody>
+                <tr>
+                  <td>
+                    <%= link_to image_path('radionica_prakticni1.jpg'), data: { lightbox: 'radionica' } do %>
+                      <%= image_tag 'radionica_prakticni1.jpg', class: 'img-responsive img-fadein'%>
+                    <% end %>
+                  </td>
 
-                <td>
-                  <%= link_to image_path('radionica_prakticni2.jpg'), data: { lightbox: 'radionica' } do %>
-                    <%= image_tag 'radionica_prakticni2.jpg', class: 'img-responsive img-fadein'%>
-                  <% end %>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                  <td>
+                    <%= link_to image_path('radionica_prakticni2.jpg'), data: { lightbox: 'radionica' } do %>
+                      <%= image_tag 'radionica_prakticni2.jpg', class: 'img-responsive img-fadein'%>
+                    <% end %>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
